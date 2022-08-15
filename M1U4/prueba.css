@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    text-decoration: underline overline;
+    font-size: 100px;
+}
+
+h2{
+    text-decoration: 5px underline;
+    text-align: center;
+    font-size: 80px;
+}
+
+h3{
+    text-decoration: 5px underline;
+    text-align: center;
+    font-size: 50px;
+}
+
+h4{
+    text-decoration: 5px underline;
+    text-align: center;
+    font-size: 20px;
+}
+
+.body{
+    border: solid black;
+    padding: 1px;
+}
+
+.imagen{
+    display: block;
+    margin: 0px auto;
+}
+
+.info{
+    width: 490px;
+    margin-inline: auto;
+    font-size: 30px;
+}
+
+.adicional{
+    width: 600px;
+    margin-inline: auto;
+    font-size: 20px;
+}
+
+#contacto{
+    margin: auto;
+    text-align: center;
+}
