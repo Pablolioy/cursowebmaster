@@ -2,10 +2,10 @@ h1 {
     text-align: center;
     text-decoration: underline overline;
     font-size: 100px;
-    background: rgba(80, 77, 77, 0.84);
-    background: linear-gradient(180deg, rgba(80, 77, 77, 0.84) 40%, rgba(137, 135, 135, 0.85) 80%);
-    background: -webkit-linear-gradient(180deg, rgba(80, 77, 77, 0.84) 40%, rgba(137, 135, 135, 0.85) 80%);
-    background: -moz-linear-gradient(180deg, rgba(80, 77, 77, 0.84) 40%, rgba(137, 135, 135, 0.85) 80%);
+    background: rgba(118, 118, 118, 0.36);
+    background: linear-gradient(180deg, rgba(118, 118, 118, 0.36) 30%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
+    background: -webkit-linear-gradient(180deg, rgba(118, 118, 118, 0.36) 30%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
+    background: -moz-linear-gradient(180deg, rgba(118, 118, 118, 0.36) 30%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
 }
 
 h2 {
@@ -29,28 +29,36 @@ h4 {
 .body {
     border: solid black;
     padding: 1px;
+    background: rgba(118, 118, 118, 0.36);
+    background: linear-gradient(180deg, rgba(118, 118, 118, 0.36) 20%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
+    background: -webkit-linear-gradient(180deg, rgba(118, 118, 118, 0.36) 20%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
+    background: -moz-linear-gradient(180deg, rgba(118, 118, 118, 0.36) 20%, rgba(255, 0, 20, 0) 50%, rgba(40, 40, 40, 0.4) 80%);
 }
 
 .imagen {
     display: block;
     margin: 0px auto;
+    border-radius: 50px;
+    box-shadow: 4px -4px 44px -9px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 4px -4px 44px -9px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 4px -4px 44px -9px rgba(0, 0, 0, 1);
 }
 
 .info {
-    width: 490px;
+    column-count: 2;
+    width: 600px;
     margin-inline: auto;
     font-size: 30px;
+}
+
+.info .sinmargen{
+    margin-top: 0%;
 }
 
 .adicional {
     width: 600px;
     margin-inline: auto;
-    font-size: 20px;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.87) 3%, rgba(0, 0, 0, 0.86) 17%, rgba(0, 0, 0, 0.8) 75%, rgba(20, 7, 7, 0.77) 96%, rgba(20, 7, 7, 0.77) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.87) 3%, rgba(0, 0, 0, 0.86) 17%, rgba(0, 0, 0, 0.8) 75%, rgba(20, 7, 7, 0.77) 96%, rgba(20, 7, 7, 0.77) 100%);
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.87) 3%, rgba(0, 0, 0, 0.86) 17%, rgba(0, 0, 0, 0.8) 75%, rgba(20, 7, 7, 0.77) 96%, rgba(20, 7, 7, 0.77) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de000000', endColorstr='#c4140707', GradientType=1);
-
+    font-size: 25px;
 }
 
 #contacto {
