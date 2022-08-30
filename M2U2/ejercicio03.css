@@ -1,0 +1,30 @@
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Horizontal de Izq a Der */
+    justify-content: space-between;  /* Espacios sobre elementos en eje X */
+    background: white;
+    border: solid 2px black;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: center; /* Ajuste horizontal al centro */
+    align-items: center;  /* Ajuste vertical al centro */
+}
+
+.item:first-child{
+    background: red;
+}
+
+.item:last-child{
+    background-color: green;
+}
+
+#imagen{
+    display: block;
+    margin: auto;
+}

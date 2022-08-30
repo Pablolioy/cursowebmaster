@@ -1,0 +1,32 @@
+.contenedor {
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Vertical de arrba a abajo */
+    align-items: flex-end;  /* Alinear items al final */
+    width: 450px;
+    background: white;
+    border: solid 2px black;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: center; /* Ajuste horizontal al centro */
+    align-items: center; /* Ajuste vertical al centro */
+}
+
+.item:first-child{      /* Estilo adicional al primer elemento */
+    background: red;
+}
+
+.item:last-child{       /* Estilo adicional al ultimo elemento */
+    background-color: green;
+}
+
+#imagen{
+    display: block;
+    margin: auto;
+}
