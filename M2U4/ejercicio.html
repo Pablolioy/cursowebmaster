@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .bg {
+            background: rgba(23, 23, 23, 0.75);
+            background: linear-gradient(90deg, rgba(23, 23, 23, 0.75) 0%, rgba(0, 0, 0, 0.86) 80%);
+            background: -webkit-linear-gradient(90deg, rgba(23, 23, 23, 0.75) 0%, rgba(0, 0, 0, 0.86) 80%);
+            background: -moz-linear-gradient(90deg, rgba(23, 23, 23, 0.75) 0%, rgba(0, 0, 0, 0.86) 80%);
+        }
+    </style>
+</head>
+
+<body class="bg">
+
+    <!-- Barra de navegacion -->
+
+    <nav class="navbar fixed-top bg-black">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button">Inicio</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button">Categorias</button>
+        </form>
+    </nav>
+
+    <!-- Inicio del contenido de tabla -->
+    <div class="row mx-auto w-75">
+        <div class="col">
+            <div class="container-fluid" style="margin-top: 50px;">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Genero</th>
+                            <th scope="col">Compra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Hollow Knight</td>
+                            <td>Metroidvania</td>
+                            <td>
+                                <a href="https://store.steampowered.com/app/367520/Hollow_Knight/"
+                                    target="_blank"><button type="button" class="btn btn-primary">Steam</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>HADES</td>
+                            <td>Roguelike</td>
+                            <td>
+                                <a href="https://store.steampowered.com/app/1145360/Hades/" target="_blank"><button
+                                        type="button" class="btn btn-primary">Steam</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Dead Cells</td>
+                            <td>Roguelike</td>
+                            <td>
+                                <a href="https://store.steampowered.com/app/588650/Dead_Cells/" target="_blank"><button
+                                        type="button" class="btn btn-primary">Steam</button></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+
+    <div id="carouselExampleCaptions" class="carousel slide w-75 mx-auto my-3" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carousel/1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block bg-secondary bg-opacity-75">
+                    <h5>Hollow Knight</h5>
+                    <p>
+                        ¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de
+                        insectos y héroes que se encuentra en ruinas.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block bg-secondary bg-opacity-75">
+                    <h5>HADES</h5>
+                    <p>Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de
+                        exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block bg-secondary bg-opacity-75">
+                    <h5>Dead Cells</h5>
+                    <p>Dead Cells es un juego de acción de plataformas de estilo roguelite e inspirado en juegos tipo
+                        metroidvania. Explorarás un castillo en constante cambio y expansión, si es que logras abrirte
+                        paso contra los guardianes en los combates 2D de estilo Dark Souls.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Cartas -->
+        <div class="d-flex align-content-around flex-wrap w-75 mx-auto" >
+            <div class="card w-50 mb-3 d-flex">
+                <img src="img/card/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+            <div class="card w-50 mb-3 d-flex">
+                <img src="img/card/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+            <div class="card w-50 mb-3 d-flex">
+                <img src="img/card/3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+            <div class="card w-50 mb-3 d-flex">
+                <img src="img/card/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
