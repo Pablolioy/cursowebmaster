@@ -1,0 +1,234 @@
+body{
+    font-family: 'Rubik';
+    font-size: 16px;
+    margin: 0;
+}
+
+a{
+    color: blue;
+}
+
+a:visited{
+    color: blue;
+}
+
+header{
+    background-color: black;
+}
+
+header h1{
+    color: white;
+    display: inline;
+    position: relative;
+    bottom: 30px;
+    margin-left: 10px;
+}
+
+nav{
+    height: 40px;
+    background-color: green;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    margin: auto;
+    max-width: 960px;
+}
+
+nav ul li{
+    flex-grow: 1;
+}
+
+nav ul li a{
+    text-align: center;
+    color: black;
+    display: block;
+    text-decoration: none;
+    margin-block: 10px;
+}
+nav ul li a:hover{
+    color: blue;
+}
+
+main{
+    background-color: blue;
+}
+
+main * h1{
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* PIE DE PAGINA INICIO */
+
+footer{
+    height: 200px;
+    text-align: center;
+    background-color: aqua;
+}
+
+footer ul{
+    list-style: none;
+}
+
+
+.pie{
+    display: flex;
+}
+
+.pie ul{
+    width: 30%;
+}
+
+.redes{
+    width: 70%;
+}
+
+.redes-icons {
+    font-size: 50px;
+}
+
+/* PIE DE PAGINA FIN */
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.relative{
+    position: relative;
+}
+.activo{
+    background-color: white;
+}
+
+
+/* HOME INICIO */
+
+.bienvenido{
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    padding-inline: 10%;
+    bottom: 10%;
+}
+
+.testimonios h1{
+    text-align: center;
+}
+
+.testimonios ul{
+    list-style: none;
+    padding-inline: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonios ul li{
+    background: #262626;
+    margin-block: 5px;
+    width: 49%;
+    border: solid white 2px
+}
+
+.testimonios ul li p{
+    font-size: 15px;
+    color: white;
+    padding-inline: 20px;
+}
+.testimonios ul li div p{
+    color: yellow;
+    padding-left: 20px;
+    font-size: 20px;
+}
+/* HOME FIN */
+
+/* NOSOTROS INICIO */
+
+.historia h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+.historia p{
+    font-size: 15px;
+}
+
+.equipo{
+    padding-inline: auto;
+}
+
+
+.equipo h1{
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.personas{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 10px;
+}
+
+.personas li{
+        text-align: center;
+        background: #262626;
+        margin-block: 5px;
+        width: 220px;
+        border: solid white 2px
+    }
+
+.personas li img{
+        padding-top: 10px;
+        border-radius: 15%;
+}
+.personas li img:hover{
+        transform: scale(110%);
+}
+
+/* NOSOTROS FIN */
+
+/* VIDEOJUEGOS INICIO */
+
+.lista-juego{
+    padding-inline: 45px;
+    align-items: center;
+}
+
+.juego{
+    display: flex;
+    border: 5px solid white;
+    border-radius: 15px;
+    border-color: white;
+    margin-block: 10px;
+    margin-inline: 10px;
+}
+
+.juego img{
+    border-radius: 11px;
+    max-width: 30%;
+}
+
+.juego:nth-child(even){
+    padding-right: 1px;
+    flex-direction: row-reverse;
+}
+
+.juego-cont{
+    width: 70%;
+    padding-inline: 20px;
+}
+
+.juego-cont h2{
+    font-size: 35px;
+}
+
+/* VIDEOJUEGOS FIN */
