@@ -4,14 +4,6 @@ body{
     margin: 0;
 }
 
-a{
-    color: blue;
-}
-
-a:visited{
-    color: blue;
-}
-
 header{
     background-color: black;
 }
@@ -20,13 +12,11 @@ header h1{
     color: white;
     display: inline;
     position: relative;
-    bottom: 30px;
-    margin-left: 10px;
+    bottom: 15px;
 }
 
 nav{
-    height: 40px;
-    background-color: green;
+    justify-content: center;
 }
 
 nav ul{
@@ -50,14 +40,14 @@ nav ul li a{
     margin-block: 10px;
 }
 nav ul li a:hover{
-    color: blue;
+    color: white;
 }
 
 main{
-    background-color: blue;
+    padding-block: 5px;
 }
-
 main * h1{
+    padding-top: 15px;
     color: white;
     text-decoration: underline;
     text-align: center;
@@ -68,19 +58,19 @@ main * h1{
 footer{
     height: 200px;
     text-align: center;
-    background-color: aqua;
 }
 
 footer ul{
+    padding-left: 0;
     list-style: none;
 }
 
 
-.pie{
+.flex{
     display: flex;
 }
 
-.pie ul{
+.flex ul{
     width: 30%;
 }
 
@@ -97,10 +87,15 @@ footer ul{
 .holder{
     max-width: 960px;
     margin: 0 auto;
+    padding-inline: 45px;
 }
 
 .relative{
     position: relative;
+}
+
+.relative p{
+    color: white;
 }
 .activo{
     background-color: white;
@@ -130,7 +125,6 @@ footer ul{
 }
 
 .testimonios ul li{
-    background: #262626;
     margin-block: 5px;
     width: 49%;
     border: solid white 2px
@@ -138,11 +132,12 @@ footer ul{
 
 .testimonios ul li p{
     font-size: 15px;
-    color: white;
+    color: grey;
     padding-inline: 20px;
 }
 .testimonios ul li div p{
-    color: yellow;
+    color: white;
+    text-decoration: underline;
     padding-left: 20px;
     font-size: 20px;
 }
@@ -199,7 +194,6 @@ footer ul{
 /* VIDEOJUEGOS INICIO */
 
 .lista-juego{
-    padding-inline: 45px;
     align-items: center;
 }
 
