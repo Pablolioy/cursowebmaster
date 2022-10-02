@@ -11,10 +11,6 @@ a:visited{
     color: black;
 }
 
-.testimonios ul li{
-    background-image: linear-gradient(to left top, #484646, #373535, #262525, #171616, #000000);background-image: linear-gradient(to left, #1d1d1d, #181818, #121212, #0a0a0a, #000000);
-}
-
 nav,
 footer {
     background: rgba(82, 82, 82, 0.64);
@@ -29,4 +25,15 @@ main{
     box-shadow: 1px 2px 30px 20px rgba(13,13,13,0.75);
     -webkit-box-shadow: 1px 2px 30px 20px rgba(13,13,13,0.75);
     -moz-box-shadow: 1px 2px 30px 20px rgba(13,13,13,0.75);
+}
+
+.testimonios ul li{
+    background-image: linear-gradient(to left top, #484646, #373535, #262525, #171616, #000000);background-image: linear-gradient(to left, #1d1d1d, #181818, #121212, #0a0a0a, #000000);
+}
+
+.articulo{
+    background-image: linear-gradient(to left top, #464646, #3b3b3b, #313131, #272727, #1d1d1d);
+    box-shadow: 1px 2px 30px 20px rgba(13,13,13,0.75);
+    -webkit-box-shadow: 1px 2px 20px 5px rgba(13,13,13,0.75);
+    -moz-box-shadow: 1px 2px 20px 5px rgba(13,13,13,0.75);
 }

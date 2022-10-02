@@ -191,6 +191,52 @@ footer ul{
 
 /* NOSOTROS FIN */
 
+/* GALERIA INICIO */
+
+.galeria{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: blue;
+}
+
+.galeria img{
+    border: 1px solid white;
+    background-color: gray;
+    padding: 4px;
+    margin: 1px; 
+    box-sizing: border-box;
+    transition-duration: 0.5s;
+}
+
+.galeria img:hover{
+    transform: scale(1.1);
+}
+
+/* GALERIA FIN */
+
+/* NOVEDADES INICIO */
+
+
+.articulo{
+    padding-inline: 10px;
+    padding-block: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.articulo h4{
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+
+}
+
+
+/* NOVEDADES FIN */
+
 /* VIDEOJUEGOS INICIO */
 
 .lista-juego{
