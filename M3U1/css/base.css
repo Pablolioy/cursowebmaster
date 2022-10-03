@@ -198,11 +198,10 @@ footer ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: blue;
 }
 
 .galeria img{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     background-color: gray;
     padding: 4px;
     margin: 1px; 
@@ -212,6 +211,7 @@ footer ul{
 
 .galeria img:hover{
     transform: scale(1.1);
+
 }
 
 /* GALERIA FIN */
@@ -272,3 +272,56 @@ footer ul{
 }
 
 /* VIDEOJUEGOS FIN */
+
+
+/* CONTACTO INICIO */
+
+.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    min-width: 500px;
+    padding: 30px;
+    margin-bottom: 10px;
+
+}
+
+.formulario, .datos{
+    width: 420px;
+}
+
+.formulario p{
+    display: flex;
+    padding-left: 10%;
+}
+
+.formulario p input{
+    width: 335px;
+}
+
+.formulario * textarea{
+    resize: vertical;
+    width: 100%;
+}
+
+.formulario * label{
+    min-width: 80px;
+}
+
+.datos{
+    text-align: center;
+}
+.datos * li{
+    font-size: 14px;
+    margin-block: 5px;
+    text-align: left;    
+}
+
+.pl-10{
+    margin-left: 116px;
+}
+
+
+/* CONTACTO FIN */
