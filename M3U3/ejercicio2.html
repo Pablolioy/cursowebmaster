@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        // Crear una función que reciba como parámetro un array 
+        // de números y devuelva el mayor.
+
+        var num = [0,0,0,0,0]
+        var max = 0
+        var x = 0
+        console.log(num)
+
+        for(x=0;x<=num.length-1;x++){
+            num[x]=parseInt(prompt("Ingrese numero: "))
+            document.write(x+1 +"°: " + num[x] + "</br>");
+            console.log(num)
+            console.log(x)
+            if(num[x]>max){
+                max = num[x];
+            }
+            console.log(max);
+        }
+        
+        document.write("</br>Numero maximo: " + max);
+    </script>
+</body>
+</html>

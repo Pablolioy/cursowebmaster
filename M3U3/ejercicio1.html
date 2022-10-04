@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+
+    <script>
+        //Crear una función que dada una distancia determine el medio de transporte apropiado de acuerdo a las siguientes reglas:
+        //0 a 1000 metros = pie
+        //1000 a 10000 metros = bicicleta
+        //10000 a 30000 metros = colectivo
+        //30000 a 100000 metros = auto
+        //+100000 = avión
+
+        var distancia = 0;
+
+        distancia = parseInt(prompt("Ingrese distancia", ''));
+        console.log(distancia);
+
+        if (distancia < 0) {
+            document.write("No se permiten numeros negativos, recargue la pagina");
+        } else {
+            if (distancia <= 1000) {
+                document.write("Metodo de transporte: A pie");
+            } else {
+                if (distancia <= 10000) {
+                    document.write("Metodo de transporte: En bicicleta");
+                } else {
+                    if (distancia <= 30000) {
+                        document.write("Metodo de transporte: En colectivo");
+                    } else {
+                        if (distancia <= 100000) {
+                            document.write("Metodo de transporte: En auto");
+                        } else {
+                            document.write("Metodo de transporte: En avion");
+                        }
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
