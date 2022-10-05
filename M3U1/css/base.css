@@ -94,6 +94,9 @@ footer ul{
     position: relative;
 }
 
+#homeimg{
+    max-width: 100%;
+}
 .relative p{
     color: white;
 }
@@ -325,3 +328,4 @@ footer ul{
 
 
 /* CONTACTO FIN */
+

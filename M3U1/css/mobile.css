@@ -1,0 +1,112 @@
+@media screen and (max-width: 600px) {
+
+    .logo {
+        text-align: center;
+    }
+
+    /* HOME INICIO */
+    .holder {
+        max-width: 100%;
+        margin: 10px;
+        padding-inline: 5%;
+    }
+
+    #homeimg {
+        max-width: 100%;
+    }
+
+    .testimonios ul {
+        padding-inline: 0;
+    }
+
+    .testimonios ul li {
+        width: 100%;
+    }
+
+    /* HOME FIN */
+
+    /* JUEGO INICIO */
+    .juego {
+        flex-direction: column;
+        margin-inline: 0px;
+        position: relative;
+    }
+
+    .juego:nth-child(even) {
+        flex-direction: column;
+        margin-inline: 0px;
+        position: relative;
+    }
+
+    .juego img {
+        max-width: 100%;
+
+    }
+
+    .juego-cont {
+        position: absolute;
+        bottom: 1%;
+    }
+
+    /* JUEGO FIN */
+
+    /* GALERIA INICIO */
+    .galeria {
+        padding-inline: 1%;
+    }
+
+    .galeria img {
+        width: 49%;
+    }
+
+    /* GALERIA FIN  */
+
+    /* NOSOTROS INICIO */
+    .historia {
+        text-align: center;
+    }
+
+    .personas {
+        flex-direction: column;
+    }
+
+    .personas li {
+        display: flex;
+        height: 200px;
+        width: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .personas li img {
+        padding: 2%;
+    }
+
+    .personas li h2,
+    .personas li h3 {
+        width: 65%;
+        margin-block: 2%
+    }
+
+    .personas li p {
+        width: 65%;
+        font-size: 14px;
+        margin: 1px;
+    }
+
+    /* NOSOTROS FIN */
+
+    /* CONTACTO INICIO */
+    .contacto {
+        padding-block: 2%;
+        margin-block: 0;
+        min-height: 0px;
+        min-width: 0px;
+    }
+
+    .formulario{
+        margin-block: 10%;
+    }
+    /* CONTACTO FIN */
+
+}
