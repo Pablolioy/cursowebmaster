@@ -65,7 +65,6 @@ footer ul{
     list-style: none;
 }
 
-
 .flex{
     display: flex;
 }
@@ -281,11 +280,10 @@ footer ul{
 
 .contacto{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    min-height: 450px;
-    min-width: 500px;
+    min-height: 500px;
     padding: 30px;
     margin-bottom: 10px;
 
@@ -293,6 +291,7 @@ footer ul{
 
 .formulario, .datos{
     width: 420px;
+    margin-block: 20px
 }
 
 .formulario p{
@@ -322,7 +321,7 @@ footer ul{
     text-align: left;    
 }
 
-.pl-10{
+.ml-10{
     margin-left: 116px;
 }
 

@@ -4,6 +4,10 @@
         text-align: center;
     }
 
+    nav * a{
+        font-size: 13px;
+        font-weight: bold;
+    }
     /* HOME INICIO */
     .holder {
         max-width: 100%;
@@ -98,15 +102,31 @@
 
     /* CONTACTO INICIO */
     .contacto {
-        padding-block: 2%;
+        padding: 5%;
         margin-block: 0;
         min-height: 0px;
         min-width: 0px;
     }
 
-    .formulario{
-        margin-block: 10%;
+    .formulario form p input {
+        width: 100%;
     }
+
+    .formulario form p{
+        padding-inline: 5%;
+    }
+
+    .formulario,
+    .datos {
+        margin-block: 10%;
+        width: 100%;
+    }
+
+    .ml-0{
+        margin-left: 0;
+        text-align: center;
+    }
+
     /* CONTACTO FIN */
 
 }
