@@ -71,29 +71,38 @@
     }
 
     .personas {
+        text-align: center;
+        padding-inline: 0;
         flex-direction: column;
     }
 
     .personas li {
         display: flex;
-        height: 200px;
-        width: auto;
-        flex-direction: column;
         flex-wrap: wrap;
-    }
+        width: 100%;
+        flex-direction: row;
 
+    }
+    
     .personas li img {
+        width: 33%;
         padding: 2%;
     }
-
-    .personas li h2,
-    .personas li h3 {
-        width: 65%;
+    
+    .personas li h2{
+        width: 59%;
+        margin-block: 2%;
+        padding: 2%;
+    }
+    .personas li h3{
+        text-align: left;
+        width: 100%;
+        padding-left: 2%;
         margin-block: 2%
     }
 
     .personas li p {
-        width: 65%;
+        width: 100%;
         font-size: 14px;
         margin: 1px;
     }
