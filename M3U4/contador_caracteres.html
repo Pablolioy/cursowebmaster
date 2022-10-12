@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form name="formulario">
+            <textarea name="texto" id="areap" cols="30" rows="10"></textarea>
+            <h3>Caracteres: <span id="cuenta">0</span></h3>
+        </form>
+    </div>
+    <script>
+        function con_caracter() {
+            caracteres = document.formulario.texto.value.length;
+            console.log(caracteres);
+            document.getElementById('cuenta').textContent = caracteres;
+        }
+        document.getElementById('areap').addEventListener("input",con_caracter)
+    </script>
+</body>
+
+</html>
