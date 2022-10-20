@@ -22,6 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+//Tarea
+
+app.get('/home', function(req,res){
+  res.render('home')
+})
+
+app.get('/galeria', (req,res) => {
+  res.render('galeria')
+})
+
+app.get('/listado', function(req,res){
+  res.render('listado')
+})
+// Fin tarea
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
