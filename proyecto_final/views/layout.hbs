@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="stylesheets/normalza.css">
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/estilo.css">
+  <link rel="stylesheet" href="stylesheets/mobile.css" media="(max-width: 600px)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="holder logo">
+      <img src="images/logo.png" alt="" class="img">
+      <h1>team cherry</h1>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li class="{{#if isHome}}activo{{/if}}"><a href="/">Home</a></li>
+      <li class="{{#if isVideojuegos}}activo{{/if}}"><a href="/videojuegos">Videojuegos</a></li>
+      <li class="{{#if isGaleria}}activo{{/if}}"><a href="/galeria">Galeria</a></li>
+      <li class="{{#if isNovedades}}activo{{/if}}"><a href="/novedades">Novedades</a></li>
+      <li class="{{#if isNosotros}}activo{{/if}}"><a href="/nosotros">Nosotros</a></li>
+      <li class="{{#if isContacto}}activo{{/if}}"><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <main class="holder">
+  {{{body}}}
+  
+  </main>
+  <footer>
+    <div class="holder flex">
+      <ul>
+      <li class="{{#if isHome}}activo{{/if}}"><a href="/">Home</a></li>
+      <li class="{{#if isVideojuegos}}activo{{/if}}"><a href="/videojuegos">Videojuegos</a></li>
+      <li class="{{#if isGaleria}}activo{{/if}}"><a href="/galeria">Galeria</a></li>
+      <li class="{{#if isNovedades}}activo{{/if}}"><a href="/novedades">Novedades</a></li>
+      <li class="{{#if isNosotros}}activo{{/if}}"><a href="/nosotros">Nosotros</a></li>
+      <li class="{{#if isContacto}}activo{{/if}}"><a href="/contacto">Contacto</a></li>
+      </ul>
+      <div class="redes">
+        <p>Seguinos!!</p>
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook redes-icons"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i
+            class="fa-brands fa-square-instagram redes-icons"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-square-twitter redes-icons"></i></a>
+      </div>
+    </div>
+    <p>Creado por Pablo Lioy</p>
+  </footer>
+</body>
+
+</html>

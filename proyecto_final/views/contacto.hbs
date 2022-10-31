@@ -1,0 +1,36 @@
+<div>
+    <h1>Contacto</h1>
+    <div class="contacto">
+        <div class="formulario">
+            <h2 class="ml-10 ml-0">Contacta con nosotros</h2>
+            <form action="/contacto" method="post">
+                <p>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre">
+                </p>
+                <p>
+                    <label for="mail">E-mail: </label>
+                    <input type="mail" name="mail">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="mensaje" id="" rows="10"></textarea>
+                </p>
+
+                <input class="ml-10" type="submit" value="Enviar">
+
+            </form>
+
+            <p>{{message}}</p>
+        </div>
+        <div class="datos">
+            <h2>Otros vias de comunicacion</h2>
+            <p>Tambien puedes contactarte con nosotros usando los siguientes medios</p>
+            <ul>
+                <li>E-mail: prueba@email.com</li>
+                <li>Telefono: (011) 115-999-9999</li>
+                <li>Direccion: Prueba 123</li>
+            </ul>
+        </div>
+    </div>
+</div>

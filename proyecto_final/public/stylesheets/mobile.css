@@ -1,0 +1,141 @@
+@media screen and (max-width: 600px) {
+
+    .logo {
+        text-align: center;
+    }
+
+    nav * a{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    /* HOME INICIO */
+    .holder {
+        max-width: 100%;
+        margin: 10px;
+        padding-inline: 5%;
+    }
+
+    #homeimg {
+        max-width: 100%;
+    }
+
+    .testimonios ul {
+        padding-inline: 0;
+    }
+
+    .testimonios ul li {
+        width: 100%;
+    }
+
+    /* HOME FIN */
+
+    /* JUEGO INICIO */
+    .juego {
+        flex-direction: column;
+        margin-inline: 0px;
+        position: relative;
+    }
+
+    .juego:nth-child(even) {
+        flex-direction: column;
+        margin-inline: 0px;
+        position: relative;
+    }
+
+    .juego img {
+        max-width: 100%;
+
+    }
+
+    .juego-cont {
+        position: absolute;
+        bottom: 1%;
+    }
+
+    /* JUEGO FIN */
+
+    /* GALERIA INICIO */
+    .galeria {
+        padding-inline: 1%;
+    }
+
+    .galeria img {
+        width: 49%;
+    }
+
+    /* GALERIA FIN  */
+
+    /* NOSOTROS INICIO */
+    .historia {
+        text-align: center;
+    }
+
+    .personas {
+        text-align: center;
+        padding-inline: 0;
+        flex-direction: column;
+    }
+
+    .personas li {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+
+    }
+    
+    .personas li img {
+        width: 33%;
+        padding: 2%;
+    }
+    
+    .personas li h2{
+        width: 59%;
+        margin-block: 2%;
+        padding: 2%;
+    }
+    .personas li h3{
+        text-align: left;
+        width: 100%;
+        padding-left: 2%;
+        margin-block: 2%
+    }
+
+    .personas li p {
+        width: 100%;
+        font-size: 14px;
+        margin: 1px;
+    }
+
+    /* NOSOTROS FIN */
+
+    /* CONTACTO INICIO */
+    .contacto {
+        padding: 5%;
+        margin-block: 0;
+        min-height: 0px;
+        min-width: 0px;
+    }
+
+    .formulario form p input {
+        width: 100%;
+    }
+
+    .formulario form p{
+        padding-inline: 5%;
+    }
+
+    .formulario,
+    .datos {
+        margin-block: 10%;
+        width: 100%;
+    }
+
+    .ml-0{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* CONTACTO FIN */
+
+}
