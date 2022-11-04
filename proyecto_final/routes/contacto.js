@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-
 var nodemailer = require('nodemailer');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('contacto', {
+router.get('/',(req, res, next) => {
+  res.render('contacto',{
     isContacto: true
   });
+  
 });
 
 router.post('/', async (req, res, next) => {
@@ -18,8 +18,8 @@ router.post('/', async (req, res, next) => {
   var mensaje = req.body.mensaje;
 
   var obj = {
-    to: 'pablitolioy@gmail.com',
-    subject: 'Team Cherry',
+    to: mail,
+    subject: "Test Team Cherry",
     html: nombre + " se contacto desde la web Team Cherry y solicita mas informacion a este correo: " + mail + "<br> Ademas, hiso el siguiente comentario: " + mensaje,
   }
   var transport = nodemailer.createTransport({

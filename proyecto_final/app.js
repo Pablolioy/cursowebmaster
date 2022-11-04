@@ -20,9 +20,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -39,25 +39,25 @@ app.use('/contacto', contactoRouter);
 
 //--------
 
-app.get('/videojuegos', function (req, res){
-  res.render('videojuegos');
-})
+// app.get('/videojuegos', function (req, res){
+//   res.render('videojuegos');
+// })
 
-app.get('/contacto', function (req, res){
-  res.render('contacto');
-})
+// app.get('/contacto', function (req, res){
+//   res.render('contacto');
+// })
 
-app.get('/galeria', function (req, res){
-  res.render('galeria');
-})
+// app.get('/galeria', function (req, res){
+//   res.render('galeria');
+// })
 
-app.get('/nosotros', function (req, res){
-  res.render('nosotros');
-})
+// app.get('/nosotros', function (req, res){
+//   res.render('nosotros');
+// })
 
-app.get('/novedades', function (req, res){
-  res.render('novedades');
-})
+// app.get('/novedades', function (req, res){
+//   res.render('novedades');
+// })
 
 //-------------
 

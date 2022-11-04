@@ -6,19 +6,18 @@
             <form action="/contacto" method="post">
                 <p>
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre" required>
                 </p>
                 <p>
                     <label for="mail">E-mail: </label>
-                    <input type="mail" name="mail">
+                    <input type="mail" name="mail" required>
                 </p>
                 <p>
                     <label for="mensaje">Mensaje: </label>
-                    <textarea name="mensaje" id="" rows="10"></textarea>
+                    <textarea name="mensaje" id="" rows="10" required></textarea>
                 </p>
 
-                <input class="ml-10" type="submit" value="Enviar">
-
+                <button class="ml-10" type="submit">Enviar</button>
             </form>
 
             <p>{{message}}</p>
