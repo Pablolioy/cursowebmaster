@@ -1,5 +1,17 @@
+@font-face {
+    font-family: "Trajan Pro";
+    src: url('font/trajan_pro_regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Darwin Pro";
+    src: url('font/Los\ Andes\ Type\ \ Darwin\ Pro\ Bold.woff') format('woff');
+}
+
 body{
-    font-family: 'Rubik';
+    font-family: "Trajan Pro";
     font-size: 16px;
     margin: 0;
 }
@@ -10,9 +22,13 @@ header{
 
 header h1{
     color: white;
-    display: inline;
-    position: relative;
-    bottom: 15px;
+    font-family: "Darwin Pro";
+    font-size: 40px;
+}
+
+#TClogo {
+    height: 80px;
+    align-items: center;
 }
 
 nav{
@@ -30,6 +46,8 @@ nav ul{
 
 nav ul li{
     flex-grow: 1;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 nav ul li a{
@@ -87,6 +105,7 @@ footer ul{
     max-width: 960px;
     margin: 0 auto;
     padding-inline: 45px;
+    align-items: center;
 }
 
 .relative{
