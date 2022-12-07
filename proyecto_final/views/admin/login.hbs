@@ -1,0 +1,13 @@
+<h1>Ingrese datos</h1>
+<form action="/admin/login" method="post">
+    <div>
+        <input type="text" name="usuario" placeholder="Usuario">
+    </div>
+    <div>
+        <input type="password" name="clave" placeholder="Contraseña">
+    </div>
+        <input type="submit">
+</form>
+        {{#if error}}
+            <p>Usuario o Contraseña incorrecto</p>
+        {{/if}}
