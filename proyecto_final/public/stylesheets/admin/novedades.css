@@ -1,0 +1,13 @@
+#user{
+    display: flex;
+    align-items: center;
+    justify-content:space-around    
+}
+
+#user button{
+    color: white;
+}
+
+#user button:visited{
+    color: white;
+}
