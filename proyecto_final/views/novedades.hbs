@@ -1,47 +1,12 @@
 <div>
     <h1>Novedades</h1>
+    {{#each novedades}}
     <div class="articulo">
-        <h2>Titulo</h2>
-        <h3>Subtitulo</h3>
-        <h4>hora y fecha</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia cumque praesentium numquam odit
-            asperiores odio nostrum laborum illo, fuga amet quaerat, similique distinctio dicta eius ratione aut
-            quasi voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ipsa iusto
-            temporibus voluptates necessitatibus consectetur autem rerum eius quis voluptate voluptas ipsum,
-            odit, possimus culpa aut expedita. Ratione, expedita accusantium?</p>
+        <h2>{{titulo}}</h2>
+        <h3>{{subtitulo}}</h3>
+        <h4>{{hora_fecha}}</h4>
+        <p>{{contenido}}</p>
         <hr>
     </div>
-    <div class="articulo">
-        <h2>Titulo</h2>
-        <h3>Subtitulo</h3>
-        <h4>hora y fecha</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia cumque praesentium numquam odit
-            asperiores odio nostrum laborum illo, fuga amet quaerat, similique distinctio dicta eius ratione aut
-            quasi voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ipsa iusto
-            temporibus voluptates necessitatibus consectetur autem rerum eius quis voluptate voluptas ipsum,
-            odit, possimus culpa aut expedita. Ratione, expedita accusantium?</p>
-        <hr>
-    </div>
-    <div class="articulo">
-        <h2>Titulo</h2>
-        <h3>Subtitulo</h3>
-        <h4>hora y fecha</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia cumque praesentium numquam odit
-            asperiores odio nostrum laborum illo, fuga amet quaerat, similique distinctio dicta eius ratione aut
-            quasi voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ipsa iusto
-            temporibus voluptates necessitatibus consectetur autem rerum eius quis voluptate voluptas ipsum,
-            odit, possimus culpa aut expedita. Ratione, expedita accusantium?</p>
-        <hr>
-    </div>
-    <div class="articulo">
-        <h2>Titulo</h2>
-        <h3>Subtitulo</h3>
-        <h4>hora y fecha</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic quia cumque praesentium numquam odit
-            asperiores odio nostrum laborum illo, fuga amet quaerat, similique distinctio dicta eius ratione aut
-            quasi voluptatibus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ipsa iusto
-            temporibus voluptates necessitatibus consectetur autem rerum eius quis voluptate voluptas ipsum,
-            odit, possimus culpa aut expedita. Ratione, expedita accusantium?</p>
-        <hr>
-    </div>
+    {{/each}}
 </div>

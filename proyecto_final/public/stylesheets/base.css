@@ -75,7 +75,8 @@ main * h1{
 
 footer{
     height: 200px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0;
 }
 
@@ -245,8 +246,17 @@ footer ul{
 .articulo{
     padding-inline: 10px;
     padding-block: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     position: relative;
+}
+
+.articulo h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.articulo h3{
+    text-align: center
 }
 
 .articulo h4{
@@ -254,9 +264,14 @@ footer ul{
     position: absolute;
     right: 5px;
     top: 0;
-
+    margin-top: 10px;
 }
 
+/* .articulo p{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+} */
 
 /* NOVEDADES FIN */
 

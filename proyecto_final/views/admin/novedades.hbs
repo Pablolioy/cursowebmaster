@@ -1,7 +1,33 @@
 <div id="user">
     <h4>Hola {{usuario}}</h4>
-    <a href="/admin/login/logout"><button  type="button" class="btn btn-danger">Cerrar session</button></a>
+    <a href="/admin/login/logout"><button  type="button" class="pushy__btn pushy__btn--md pushy__btn--red">Cerrar session</button></a>
 </div>
 <div class="holder">
-    <h1>PROXIMAMENTE</h1>
+    <table>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Hora/Fecha</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Subtitulo</th>
+      <th scope="col">Contenido</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each novedades}}
+    <tr>
+      <td>{{id}}</td>
+      <td data-label="hora_fecha">{{hora_fecha}}</td>
+      <td data-label="titulo">{{titulo}}</td>
+      <td data-label="subtitulo">{{subtitulo}}</td>
+      <td data-label="contenido">{{contenido}}</td>
+      <td data-label="acciones">
+        <a href=""><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-pen-to-square"></i></button></a>
+        <a href="/admin/novedades/eliminar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-trash"></i></button></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
 </div>
