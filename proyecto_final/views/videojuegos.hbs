@@ -1,49 +1,15 @@
 <div>
     <h1>Videojuegos</h1>
     <div class="lista-juego">
+    {{#each videojuegos}}
         <div class="juego">
-            <img src="images/juegos/hollow.png" alt="">
+            <a href="videojuegos/{{id}}"><img src="images/juegos/{{id}}.png" alt="{{nombre}}"></a>
             <div class="juego-cont">
-                <h2>juego 1</h2>
-                <h3>Fecha lanzamiento</h3>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequuntur optio nisi
-                    voluptate minus excepturi, libero delectus cumque recusandae facilis nulla quae! Sunt
-                    nesciunt
-                    commodi amet optio. Alias, perferendis nulla!</h3>
+                <a href="videojuegos/{{id}}"><h2>{{nombre}}</h2></a>
+                <h3>Fecha de lanzamiento: {{date fecha_lanzamiento "DD/MM/YYYY"}}</h3>
+                <h3>{{descripcion}}</h3>
             </div>
         </div>
-        <div class="juego">
-            <img src="images/juegos/dust.png" alt="">
-            <div class="juego-cont">
-                <h2>juego 1</h2>
-                <h3>Fecha lanzamiento</h3>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequuntur optio nisi
-                    voluptate minus excepturi, libero delectus cumque recusandae facilis nulla quae! Sunt
-                    nesciunt
-                    commodi amet optio. Alias, perferendis nulla!</h3>
-            </div>
-        </div>
-        <div class="juego">
-            <img src="images/juegos/blood.png" alt="">
-            <div class="juego-cont">
-                <h2>juego 1</h2>
-                <h3>Fecha lanzamiento</h3>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequuntur optio nisi
-                    voluptate minus excepturi, libero delectus cumque recusandae facilis nulla quae! Sunt
-                    nesciunt
-                    commodi amet optio. Alias, perferendis nulla!</h3>
-            </div>
-        </div>
-        <div class="juego">
-            <img src="images/juegos/ori.png" alt="">
-            <div class="juego-cont">
-                <h2>juego 1</h2>
-                <h3>Fecha lanzamiento</h3>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequuntur optio nisi
-                    voluptate minus excepturi, libero delectus cumque recusandae facilis nulla quae! Sunt
-                    nesciunt
-                    commodi amet optio. Alias, perferendis nulla!</h3>
-            </div>
-        </div>
+    {{/each}}
     </div>
 </div>

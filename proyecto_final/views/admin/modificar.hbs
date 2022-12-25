@@ -1,0 +1,124 @@
+<div>
+    <nav class="navbar" style="background-color: #e3f2fd;">
+        <div class="col-10">
+            <ul>
+                <li>
+                    <a class="nav-link active" aria-current="page" href="/admin/novedades">Novedades</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/videojuegos">Videojuegos</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/valoraciones">Valoraciones</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/galeria">Galeria</a>
+                </li>
+            </ul>
+        </div>
+        <div id="user">
+            <h4>Hola {{usuario}}</h4>
+            <a href="/admin/login/logout"><button type="button" class="pushy__btn pushy__btn--md pushy__btn--red">Cerrar
+                    session</button></a>
+        </div>
+    </nav>
+
+{{!-- NOVEDADES --}}
+
+    {{#if modificarNovedades}}
+    <form action="/admin/novedades/modificar" method="post">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+        <p>
+            <label for="titulo">Titulo: </label>
+            <input type="text" value="{{novedad.titulo}}" name="titulo" required>
+        </p>
+        <p>
+            <label for="subtitulo">Subtitulo </label>
+            <input type="text" value="{{novedad.subtitulo}}" name="subtitulo" required>
+        </p>
+        <p>
+            <label for="contenido">Contenido </label>
+            <textarea name="contenido" id="" rows="10" required>{{novedad.contenido}}</textarea>
+        </p>
+
+        <button class="ml-10" type="submit">Enviar</button>
+    </form>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+    {{/if}}
+
+{{!-- VIDEOJUEGOS --}}
+
+    {{#if modificarVideojuego}}
+    <form action="/admin/videojuegos/modificar" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{{juego.id}}" name="id">
+        <p>
+            <label for="nombre">Titulo: </label>
+            <input type="text" value="{{juego.nombre}}" name="nombre" required>
+        </p>
+        <p>
+            <label for="fecha_lanzamiento">Fecha de lanzamiento </label>
+            <input type="date" value="{{date juego.fecha_lanzamiento " YYYY-MM-DD"}}" name="fecha_lanzamiento" required>
+        </p>
+        <p>
+            <label for="descripcion">Descripcion </label>
+            <textarea name="descripcion" id="" rows="10" required>{{juego.descripcion}}</textarea>
+        </p>
+        <p>
+            <label for="precio">Precio: </label>
+            <input type="number" name="precio" value="{{juego.precio}}">
+        </p>
+        <button class="ml-10" type="submit">Enviar</button>
+    </form>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+    {{/if}}
+
+    {{#if modificarCaratula}}
+    <form action="/admin/videojuegos/modificar/cover/{{id}}" method="post" enctype="multipart/form-data">
+        <p>
+            <input type="hidden" value="{{id}}" name="id">
+            <label for="foto">foto </label>
+            <input name="foto" type="file" accept="image/png">
+        </p>
+        <button class="ml-10" type="submit">Enviar</button>
+
+    </form>
+
+    {{/if}}
+
+    {{#if modificarCaratulaMobile}}
+    <form action="/admin/videojuegos/modificar/covermobile/{{id}}" method="post" enctype="multipart/form-data">
+        <p>
+            <input type="hidden" value="{{id}}" name="id">
+            <label for="foto_mobile">foto mini </label>
+            <input id="imagen" name="foto_mobile" type="file" accept="image/png">
+            <img id="previsualizacion" src="/images/mobile/{{id}}.png">
+            <button class="ml-10" type="submit">Enviar</button>
+        </p>
+    </form>
+    {{/if}}
+
+{{!-- GALERIA --}}
+
+    {{#if modificarGaleria}}
+    <form action="/admin/galeria/modificar/{{galeria.id}}" method="post" enctype="multipart/form-data">
+        <p>
+            <input type="hidden" value="{{galeria.id}}" name="id">
+            <label for="imagen">Imagen :</label>
+            <input name="imagen" id="imagen" type="file" accept="image/jpg">
+            <img id="previsualizacion" src="/images/galeria/{{galeria.id}}.jpg">
+            <label for="descripcion">Descripcion :</label>
+            <input name="descripcion" type="text" value="{{galeria.descripcion}}">
+            <button class="ml-10" type="submit">Enviar</button>
+        </p>
+    </form>
+    {{/if}}
+
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+    <script type="text/javascript" src="/javascripts/vistaprevia.js"></script>

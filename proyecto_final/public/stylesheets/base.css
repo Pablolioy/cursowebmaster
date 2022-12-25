@@ -27,8 +27,12 @@ header h1{
 }
 
 #TClogo {
-    height: 80px;
     align-items: center;
+    margin-bottom: auto;
+}
+
+#TClogo img {
+    height: 80px;
 }
 
 nav{
@@ -292,12 +296,11 @@ footer ul{
 
 .juego img{
     border-radius: 11px;
-    max-width: 30%;
+    width: 225px;
 }
 
 .juego:nth-child(even){
     padding-right: 1px;
-    flex-direction: row-reverse;
 }
 
 .juego-cont{
@@ -306,6 +309,7 @@ footer ul{
 }
 
 .juego-cont h2{
+    text-align: center;
     font-size: 35px;
 }
 

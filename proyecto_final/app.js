@@ -3,10 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('moment')
+var hbs = require('hbs');
 
 require('dotenv').config();
-var session = require('express-session')
+var session = require('express-session');
 
 
 var indexRouter = require('./routes/index');
@@ -19,12 +19,17 @@ var contactoRouter = require('./routes/contacto');
 
 var adminLogin = require('./routes/admin/login');
 var adminNoverades = require('./routes/admin/novedades');
+var adminVideojuegos = require('./routes/admin/videojuegos');
+var adminGaleria = require('./routes/admin/galeria');
 
 var app = express();
 
 // view engine setup
+hbs.registerHelper('date', require('helper-date'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
@@ -65,6 +70,10 @@ app.use('/contacto', contactoRouter);
 //--------
 app.use('/admin/login', adminLogin);
 app.use('/admin/novedades', secured, adminNoverades);
+app.use('/admin/videojuegos', secured, adminVideojuegos);
+app.use('/admin/novedades', secured, adminNoverades);
+app.use('/admin/novedades', secured, adminNoverades);
+app.use('/admin/galeria', secured, adminGaleria);
 //-------------
 
 // catch 404 and forward to error handler

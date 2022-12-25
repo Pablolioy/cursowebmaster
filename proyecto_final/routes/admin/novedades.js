@@ -1,26 +1,81 @@
 var express = require('express');
+const { now } = require('moment/moment');
 var router = express.Router();
 var novedadesModel = require("../../models/novedadesModel");
-const date = require('date-and-time')
 
 
 
 router.get('/', async function (req, res, next) {
     var novedades = await novedadesModel.getNovedades();
-    // novedades[0].hora_fecha=date.format(novedades[0].hora_fecha,"DD/MM/YYYY HH:MM")
     res.render('admin/novedades', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
         novedades,
     })
-    console.log(novedades)
-    // console.log(novedades[0].hora_fecha)
 })
 
-router.get('/eliminar/:id', async(req, res, next) => {
+router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
     await novedadesModel.deleteNovedadesById(id);
     res.redirect('/admin/novedades')
-  });
+});
+
+router.get('/agregar', async (req, res, next) => {
+    res.render('admin/agregar', {
+        layout: 'admin/layout',
+        agregarnovedad: true,
+    })
+})
+
+router.post('/agregar', async (req, res, next) => {
+    try {
+        if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.contenido != ""){
+        req.body.hora_fecha=new Date();
+        await novedadesModel.insertNovedades(req.body)
+            res.redirect('/admin/novedades');
+        } else {
+            res.render('admin/agregar',{
+                error: true,
+                message: "Todos los campos son requeridos"
+            })
+        }
+    } catch (error) {
+        res.render('admin/agregar', {
+            layout: 'admin/layout',
+            error: true,
+            message: "No se cargo la novedad"
+        })
+    }
+})
+
+router.get('/modificar/:id', async(req, res, next) => {
+    let id = req.params.id;
+    var novedad = await novedadesModel.getNovedadesById(id);
+    res.render('admin/modificar',{
+        layout: 'admin/layout',
+        modificarNovedades: true,
+        novedad
+    })
+})
+
+router.post('/modificar',async(req,res,next) => {
+    try {
+        let obj={
+            titulo: req.body.titulo,
+            subtitulo: req.body.subtitulo,
+            contenido: req.body.contenido
+        }
+        await novedadesModel.modificarNovedadById(obj, req.body.id)
+        res.redirect('/admin/novedades');
+    } catch (error) {
+        console.log(error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message:'No se modifico la novedad'
+        })
+    }
+})
+
 
 module.exports = router;

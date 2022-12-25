@@ -1,0 +1,87 @@
+<div>
+    <nav class="navbar" style="background-color: #e3f2fd;">
+        <div class="col-10">
+            <ul>
+                <li>
+                    <a class="nav-link active" aria-current="page" href="/admin/novedades">Novedades</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/videojuegos">Videojuegos</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/valoraciones">Valoraciones</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/admin/galeria">Galeria</a>
+                </li>
+            </ul>
+        </div>
+        <div id="user">
+            <h4>Hola {{usuario}}</h4>
+            <a href="/admin/login/logout"><button type="button" class="pushy__btn pushy__btn--md pushy__btn--red">Cerrar
+                    session</button></a>
+        </div>
+    </nav>
+
+{{#if agregarnovedad}}<form action="/admin/novedades/agregar" method="post">
+    <p>
+        <label for="titulo">Titulo: </label>
+        <input type="text" name="titulo" required>
+    </p>
+    <p>
+        <label for="subtitulo">Subtitulo </label>
+        <input type="text" name="subtitulo" required>
+    </p>
+    <p>
+        <label for="contenido">Contenido </label>
+        <textarea name="contenido" id="" rows="10" required></textarea>
+    </p>
+
+    <button class="ml-10" type="submit">Enviar</button>
+</form>
+{{/if}}
+
+{{#if agregarjuego}}
+<form action="/admin/videojuegos/agregar" method="post">
+    <p>
+        <label for="nombre">Titulo: </label>
+        <input type="text" name="nombre" required>
+    </p>
+    <p>
+        <label for="fecha_lanzamiento">Fecha de lanzamiento </label>
+        <input type="date" name="fecha_lanzamiento" required>
+    </p>
+    <p>
+        <label for="descripcion">Descripcion </label>
+        <textarea name="descripcion" id="" rows="10" required></textarea>
+    </p>
+    <p>
+        <label for="precio">Precio </label>
+        <input type="number" name="precio" required>
+    </p>
+    <button class="ml-10" type="submit">Enviar</button>
+</form>
+{{/if}}
+
+{{#if error}}
+<p>{{message}}</p>
+{{/if}}
+
+ {{#if agregarGaleria}}
+    <form action="/admin/galeria/agregar" method="post">
+        <p>
+            <label for="imagen">Imagen:</label>
+            <input name="imagen" id="imagen" type="file" accept="image/jpeg">
+            <img id="previsualizacion">
+            <label for="descripcion">Descripcion :</label>
+            <input name="descripcion" type="text">
+            <button class="ml-10" type="submit">Enviar</button>
+        </p>
+    </form>
+    {{/if}}
+
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+<script type="text/javascript" src="/javascripts/vistaprevia.js"></script>

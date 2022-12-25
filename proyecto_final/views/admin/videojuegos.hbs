@@ -1,4 +1,4 @@
-<div>
+<div >
   <nav class="navbar" style="background-color: #e3f2fd;">
   <div class="col-10"> <ul>
     <li>
@@ -24,29 +24,34 @@
 </div>
 <div class="">
   <div id="listado_nov">
-    <h2 class="col-10">Listado de novedades</h2>
-    <a href="/admin/novedades/agregar"><button class="pushy__btn pushy__btn--df pushy__btn--green"><i
+    <h2 class="col-10">Listado Videojuegos</h2>
+    <a href="/admin/videojuegos/agregar"><button class="pushy__btn pushy__btn--df pushy__btn--green"><i
           class="fa-solid fa-plus"></i>Agregar</button></a>
   </div>
   <table>
     <thead>
       <tr>
       <th class="col-1">Id</th>
-      <th class="col-3">Hora/Fecha</th>
-      <th class="col-6">Titulo</th>
+      <th class="col-3">Fecha de Lanzamiento</th>
+      <th class="col-4">Titulo</th>
+      <th class="col-2">Caratulas</th>
       <th class="col-2">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      {{#each novedades}}
+      {{#each juego}}
       <tr>
         <td class="col-1"> {{id}}</td>
-        <td class="col-3" data-label="hora_fecha">{{date hora_fecha "DD/MM/YYYY HH:MM"}}</td>
-        <td class="col-6" data-label="titulo">{{titulo}}</td>
+        <td class="col-3" data-label="hora_fecha">{{date fecha_lanzamiento "DD/MM/YYYY"}}</td>
+        <td class="col-4" data-label="titulo">{{nombre}}</td>
+        <td class="col-2" data-label="caratulas">
+          <a href="/admin/videojuegos/modificar/cover/{{id}}" title="Caratula Web"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-image"></i></button></a>
+          <a href="/admin/videojuegos/modificar/covermobile/{{id}}" title="Caratula Mobile"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-mobile-screen-button"></i></button></a>
+        </td>
         <td class="col-2" data-label="acciones">
-          <a href="/admin/novedades/modificar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
+          <a href="/admin/videojuegos/modificar/{{id}}" title="Editar"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                 class="fa-solid fa-pen-to-square"></i></button></a>
-          <a href="/admin/novedades/eliminar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
+          <a href="/admin/videojuegos/eliminar/{{id}}" title="Eliminar"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                 class="fa-solid fa-trash"></i></button></a>
         </td>
       </tr>
