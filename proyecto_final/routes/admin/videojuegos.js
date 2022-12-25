@@ -21,6 +21,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
 router.get('/agregar', async (req, res, next) => {
     res.render('admin/agregar', {
         layout: 'admin/layout',
+        usuario: req.session.nombre,
         agregarjuego: true,
     })
 })
@@ -49,8 +50,9 @@ router.post('/agregar',async (req, res, next) => {
 router.get('/modificar/:id', async (req, res, next) => {
     let id = req.params.id;
     var juego = await videojuegosModel.getVideojuegosById(id);
-
+    console.log(juego)
     res.render('admin/modificar', {
+        usuario: req.session.nombre,
         layout: 'admin/layout',
         modificarVideojuego: true,
         juego,
@@ -59,7 +61,7 @@ router.get('/modificar/:id', async (req, res, next) => {
 
 router.post('/modificar', async (req, res, next) => {
     console.log("Entre en /modificar")
-    console.log(req.file)
+    console.log(req.body.id)
     try {
         let obj = {
             nombre: req.body.nombre,
@@ -82,6 +84,7 @@ router.post('/modificar', async (req, res, next) => {
 router.get('/modificar/cover/:id', async (req,res,next) => {
     let id = req.params.id;
     res.render('admin/modificar',{
+        usuario: req.session.nombre,
         layout: 'admin/layout',
         modificarCaratula: true,
         id
@@ -96,6 +99,7 @@ router.post('/modificar/cover/:id',controllerUpload.uploadCover,async (req,res,n
 router.get('/modificar/covermobile/:id', async (req,res,next) => {
     let id = req.params.id;
     res.render('admin/modificar',{
+        usuario: req.session.nombre,
         layout: 'admin/layout',
         modificarCaratulaMobile: true,
         id

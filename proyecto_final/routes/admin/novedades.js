@@ -23,6 +23,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
 router.get('/agregar', async (req, res, next) => {
     res.render('admin/agregar', {
         layout: 'admin/layout',
+        usuario: req.session.nombre,
         agregarnovedad: true,
     })
 })
@@ -53,6 +54,7 @@ router.get('/modificar/:id', async(req, res, next) => {
     var novedad = await novedadesModel.getNovedadesById(id);
     res.render('admin/modificar',{
         layout: 'admin/layout',
+        usuario: req.session.nombre,
         modificarNovedades: true,
         novedad
     })

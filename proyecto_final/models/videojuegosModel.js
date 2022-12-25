@@ -1,7 +1,7 @@
 var pool = require('./bd');
 
 async function getVideojuegos(){
-    var query = "select * from videojuegos order by id"
+    var query = "select * from videojuegos order by id desc"
     var rows = await pool.query(query);
     return rows;
 }
