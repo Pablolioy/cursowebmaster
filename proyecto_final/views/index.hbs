@@ -14,41 +14,14 @@
         <section class="testimonios">
             <h1>Testimonios</h1>
             <ul>
+                {{#each valoraciones}}
                 <li>
                     <div>
-                        <p>Valoracion: 9/10</p>
-                        <p>autor</p>
+                        <p>Valoracion: {{valoracion}}/10</p>
+                        <p>{{autor}}</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore exercitationem unde
-                        reprehenderit illo officiis eius ut blanditiis delectus, magnam debitis odit perspiciatis
-                        recusandae, consectetur beatae minus fugit voluptatum maxime!</p>
+                    <p>{{reseña}}</p>
                 </li>
-                <li>
-                    <div>
-                        <p>Valoracion: 9/10</p>
-                        <p>autor</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore exercitationem unde
-                        reprehenderit illo officiis eius ut blanditiis delectus, magnam debitis odit perspiciatis
-                        recusandae, consectetur beatae minus fugit voluptatum maxime!</p>
-                </li>
-                <li>
-                    <div>
-                        <p>Valoracion: 9/10</p>
-                        <p>autor</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore exercitationem unde
-                        reprehenderit illo officiis eius ut blanditiis delectus, magnam debitis odit perspiciatis
-                        recusandae, consectetur beatae minus fugit voluptatum maxime!</p>
-                </li>
-                <li>
-                    <div>
-                        <p>Valoracion: 9/10</p>
-                        <p>autor</p>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore exercitationem unde
-                        reprehenderit illo officiis eius ut blanditiis delectus, magnam debitis odit perspiciatis
-                        recusandae, consectetur beatae minus fugit voluptatum maxime!</p>
-                </li>
+                {{/each}}
             </ul>
         </section>

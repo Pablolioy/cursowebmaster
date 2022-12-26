@@ -1,5 +1,4 @@
 var express = require('express');
-const { now } = require('moment/moment');
 var router = express.Router();
 var novedadesModel = require("../../models/novedadesModel");
 
