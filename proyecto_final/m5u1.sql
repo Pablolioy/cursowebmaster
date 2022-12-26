@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-12-2022 a las 23:05:23
+-- Tiempo de generación: 26-12-2022 a las 01:43:14
 -- Versión del servidor: 5.7.40
 -- Versión de PHP: 8.0.26
 
@@ -175,6 +175,30 @@ INSERT INTO `usuarios` (`id`, `nombre`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `valoraciones`
+--
+
+DROP TABLE IF EXISTS `valoraciones`;
+CREATE TABLE IF NOT EXISTS `valoraciones` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `autor` varchar(50) NOT NULL,
+  `valoracion` int(2) NOT NULL,
+  `reseña` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `valoraciones`
+--
+
+INSERT INTO `valoraciones` (`id`, `autor`, `valoracion`, `reseña`) VALUES
+(1, 'Yo', 10, 'Muy buen juego, gráficamente hermoso y una excelente banda sonora. 10/10'),
+(2, 'Benjaxc', 8, 'Juego lindo, juego hermoso, juegazo. Comprar juego.'),
+(3, 'medio bestia 333', 7, 'La ambientación esta buena ,la jugabilidad se siente fluida la historia es hermosa ,no hay mucho que decir que a estas alturas no sepan ya, compralo no te arrepentirás');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `videojuegos`
 --
 
@@ -197,8 +221,7 @@ INSERT INTO `videojuegos` (`id`, `nombre`, `fecha_lanzamiento`, `descripcion`, `
 (2, 'Dust: An Elysian Tail\r\n', '2023-01-22', 'Immerse yourself in a gorgeous hand-painted world on a search for your true identity. As the mysterious warrior, Dust, your action-packed journey will take you from peaceful glades to snowy mountaintops and beyond.\r\n', 0),
 (3, 'Ori and the Will of the Wisps\r\n', '2023-01-23', 'Comienza un nuevo viaje por un mundo enorme y exótico en el que encontrarás imponentes enemigos y puzles desafiantes en tu misión para desentrañar el destino de Ori.\r\n', 0),
 (8, 'el anillo viejo', '1996-01-21', 'nuevo nuevo', 400),
-(10, 'Dragon Ball', '2022-12-12', 'Hola que tal', 300),
-(11, 'Crash ', '2022-12-06', 'El zorro que gira', 100);
+(10, 'Dragon Ball', '2022-12-12', 'Hola que tal', 300);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
