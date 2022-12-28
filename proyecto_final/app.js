@@ -72,6 +72,7 @@ app.use('/contacto', contactoRouter);
 
 //--------
 app.use('/admin/login', adminLogin);
+// app.use('/admin/index', secured, adminIndex);
 app.use('/admin/novedades', secured, adminNoverades);
 app.use('/admin/videojuegos', secured, adminVideojuegos);
 app.use('/admin/galeria', secured, adminGaleria);
