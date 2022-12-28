@@ -1,27 +1,4 @@
-<div>
-    <nav class="navbar" style="background-color: #e3f2fd;">
-        <div class="col-10">
-            <ul>
-                <li>
-                    <a class="nav-link active" aria-current="page" href="/admin/novedades">Novedades</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/admin/videojuegos">Videojuegos</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/admin/valoraciones">Valoraciones</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/admin/galeria">Galeria</a>
-                </li>
-            </ul>
-        </div>
-        <div id="user">
-            <h4>Hola {{usuario}}</h4>
-            <a href="/admin/login/logout"><button type="button" class="pushy__btn pushy__btn--md pushy__btn--red">Cerrar
-                    session</button></a>
-        </div>
-    </nav>
+{{!-- ----------------------- --}}
 
 {{#if agregarnovedad}}<form action="/admin/novedades/agregar" method="post">
     <p>
@@ -40,6 +17,8 @@
     <button class="ml-10" type="submit">Enviar</button>
 </form>
 {{/if}}
+
+{{!-- ----------------------- --}}
 
 {{#if agregarjuego}}
 <form action="/admin/videojuegos/agregar" method="post">
@@ -63,25 +42,65 @@
 </form>
 {{/if}}
 
+{{!-- ----------------------- --}}
+
+{{#if agregarGaleria}}
+<form action="/admin/galeria/agregar" method="post">
+    <p>
+        <label for="imagen">Imagen:</label>
+        <input name="imagen" id="imagen" type="file" accept="image/jpeg">
+        <img id="previsualizacion">
+        <label for="descripcion">Descripcion :</label>
+        <input name="descripcion" type="text">
+        <button class="ml-10" type="submit">Enviar</button>
+    </p>
+</form>
+{{/if}}
+
+{{!-- ----------------------- --}}
+
+{{#if agregarValoracion}}
+<form action="/admin/valoraciones/agregar" method="post">
+    <p>
+        <label for="valoracion">Valoracion: </label>
+        <input type="number" id="valoracion" name="valoracion" min="0" max="10" required>
+        <br>
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" required>
+        <br>
+        <label for="reseña">Reseña: </label>
+        <input type="text" id="reseña" name="reseña" required>
+        <button class="ml-10" type="submit">Enviar</button>
+    </p>
+</form>
+{{/if}}
+
+{{!-- ----------------------- --}}
+{{#if agregarEmpleado}}
+<form action="/admin/nosotros/empleado/agregar" method="post">
+    <p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre"required>
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido" name="apellido" required>
+        <br>
+        <label for="puesto">Puesto: </label>
+        <input type="text" id="puesto" name="puesto" required>
+        <br>
+        <label for="descripcion">Descripcion </label>
+        <textarea name="descripcion" id="descripcion" rows="10" required></textarea>
+        <button class="ml-10" type="submit">Enviar</button>
+    </p>
+</form>
+{{/if}}
+
+{{!-- ----------------------- --}}
+
 {{#if error}}
 <p>{{message}}</p>
 {{/if}}
 
- {{#if agregarGaleria}}
-    <form action="/admin/galeria/agregar" method="post">
-        <p>
-            <label for="imagen">Imagen:</label>
-            <input name="imagen" id="imagen" type="file" accept="image/jpeg">
-            <img id="previsualizacion">
-            <label for="descripcion">Descripcion :</label>
-            <input name="descripcion" type="text">
-            <button class="ml-10" type="submit">Enviar</button>
-        </p>
-    </form>
-    {{/if}}
-
-    {{#if error}}
-    <p>{{message}}</p>
-    {{/if}}
+{{!-- ----------------------- --}}
 
 <script type="text/javascript" src="/javascripts/vistaprevia.js"></script>

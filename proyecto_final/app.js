@@ -21,6 +21,10 @@ var adminLogin = require('./routes/admin/login');
 var adminNoverades = require('./routes/admin/novedades');
 var adminVideojuegos = require('./routes/admin/videojuegos');
 var adminGaleria = require('./routes/admin/galeria');
+var adminValoraciones = require('./routes/admin/valoraciones');
+var adminNosotros = require('./routes/admin/nosotros');
+
+
 
 var app = express();
 
@@ -45,7 +49,6 @@ app.use(session({
 
 secured = async (req, res, next) => {
   try{
-    console.log(req.session.id_usuario);
     if(req.session.id_usuario){
       next();
     } else {
@@ -71,9 +74,9 @@ app.use('/contacto', contactoRouter);
 app.use('/admin/login', adminLogin);
 app.use('/admin/novedades', secured, adminNoverades);
 app.use('/admin/videojuegos', secured, adminVideojuegos);
-app.use('/admin/novedades', secured, adminNoverades);
-app.use('/admin/novedades', secured, adminNoverades);
 app.use('/admin/galeria', secured, adminGaleria);
+app.use('/admin/valoraciones', secured, adminValoraciones);
+app.use('/admin/nosotros', secured, adminNosotros);
 //-------------
 
 // catch 404 and forward to error handler

@@ -27,10 +27,22 @@ const confGaleria = multer.diskStorage({
     },
 })
 
+const confhome = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/images')
+    },
+    filename: function (req, file, cb) {
+        cb(null, `${req.body.id}.jpg`)
+    },
+})
+
 const upload = multer({ storage: conf })
 const uploadMobile = multer ({ storage: confMobile})
 const uploadGaleria = multer ({ storage: confGaleria})
+const uploadHome = multer ({storage: confhome})
+
 
 exports.uploadCover = upload.single('foto')
 exports.uploadCoverMobile = uploadMobile.single('foto_mobile')
 exports.uploadGaleria = uploadGaleria.single('imagen')
+exports.uploadHome = uploadHome.single('imagen_home')

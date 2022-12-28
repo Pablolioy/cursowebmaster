@@ -1,27 +1,4 @@
-<div >
-  <nav class="navbar" style="background-color: #e3f2fd;">
-  <div class="col-10"> <ul>
-    <li>
-      <a class="nav-link active" aria-current="page" href="/admin/novedades">Novedades</a>
-    </li>
-    <li>
-      <a class="nav-link" href="/admin/videojuegos">Videojuegos</a>
-    </li>
-    <li>
-      <a class="nav-link" href="/admin/valoraciones">Valoraciones</a>
-    </li>
-    <li>
-      <a class="nav-link" href="/admin/galeria">Galeria</a>
-    </li>
-  </ul>
-  </div>
-  <div id="user">
-    <h4>Hola {{usuario}}</h4>
-    <a href="/admin/login/logout"><button type="button" class="pushy__btn pushy__btn--md pushy__btn--red">Cerrar
-        session</button></a>
-  </div>
-</nav>
-</div>
+
 <div class="">
   <div id="listado_nov">
     <h2 class="col-10">Listado Videojuegos</h2>
@@ -31,11 +8,11 @@
   <table>
     <thead>
       <tr>
-      <th class="col-1">Id</th>
-      <th class="col-3">Fecha de Lanzamiento</th>
-      <th class="col-4">Titulo</th>
-      <th class="col-2">Caratulas</th>
-      <th class="col-2">Acciones</th>
+        <th class="col-1">Id</th>
+        <th class="col-3">Fecha de Lanzamiento</th>
+        <th class="col-4">Titulo</th>
+        <th class="col-2">Caratulas</th>
+        <th class="col-2">Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -45,14 +22,17 @@
         <td class="col-3" data-label="hora_fecha">{{date fecha_lanzamiento "DD/MM/YYYY"}}</td>
         <td class="col-4" data-label="titulo">{{nombre}}</td>
         <td class="col-2" data-label="caratulas">
-          <a href="/admin/videojuegos/modificar/cover/{{id}}" title="Caratula Web"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-image"></i></button></a>
-          <a href="/admin/videojuegos/modificar/covermobile/{{id}}" title="Caratula Mobile"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-mobile-screen-button"></i></button></a>
+          <a href="/admin/videojuegos/modificar/cover/{{id}}" title="Caratula Web"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-image"></i></button></a>
+          <a href="/admin/videojuegos/modificar/covermobile/{{id}}" title="Caratula Mobile"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
+                class="fa-solid fa-mobile-screen-button"></i></button></a>
         </td>
         <td class="col-2" data-label="acciones">
-          <a href="/admin/videojuegos/modificar/{{id}}" title="Editar"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
-                class="fa-solid fa-pen-to-square"></i></button></a>
-          <a href="/admin/videojuegos/eliminar/{{id}}" title="Eliminar"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
-                class="fa-solid fa-trash"></i></button></a>
+          <a href="/admin/videojuegos/modificar/{{id}}" title="Editar"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-pen-to-square"></i></button></a>
+          <a href="/admin/videojuegos/eliminar/{{id}}" title="Eliminar"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-trash"></i></button></a>
         </td>
       </tr>
       {{/each}}

@@ -1,7 +1,7 @@
 var pool = require('./bd');
 
 async function getImage() {
-    var query = "select * from galeria order by id"
+    var query = "select * from galeria order by id desc"
     var rows = await pool.query(query);
     return rows;
 }
@@ -33,4 +33,10 @@ async function insertGaleria(obj){
     }
 }
 
-module.exports = { getImage, modificarImageById, getImageById, insertGaleria }
+async function deleteGaleriaById(id){
+    var query="delete from galeria where id = ?"
+    var rows = await pool.query(query, [id]);
+    return rows;
+}
+
+module.exports = { getImage, modificarImageById, getImageById, insertGaleria, deleteGaleriaById }

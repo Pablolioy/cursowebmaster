@@ -1,0 +1,35 @@
+
+<div class="">
+  <div id="listado_nov">
+    <h2 class="col-10">Listado Valoraciones</h2>
+    <a href="/admin/valoraciones/agregar"><button class="pushy__btn pushy__btn--df pushy__btn--green"><i
+          class="fa-solid fa-plus"></i>Agregar</button></a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-1">Id</th>
+        <th class="col-3">Autor</th>
+        <th class="col-2">Puntuacion</th>
+        <th class="col-4">Reseña</th>
+        <th class="col-2">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each valoraciones}}
+      <tr>
+        <td class="col-1">{{id}}</td>
+        <td class="col-3">{{autor}}</td>
+        <td class="col-2">{{valoracion}}</td>
+        <td class="col-4">{{reseña}}</td>
+        <td class="col-2">
+          <a href="/admin/videojuegos/modificar/{{id}}" title="Editar"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-pen-to-square"></i></button></a>
+          <a href="/admin/videojuegos/eliminar/{{id}}" title="Eliminar"><button
+              class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-trash"></i></button></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

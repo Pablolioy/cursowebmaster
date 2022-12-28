@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
+const nosotrosModel = require('../models/nosotrosModel') 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/',async function(req, res, next) {
+  var nosotros = await nosotrosModel.getEmpleados()
+  console.log(nosotros)
   res.render('nosotros', {
-    isNosotros: true
+    isNosotros: true,
+    nosotros
   });
 });
 

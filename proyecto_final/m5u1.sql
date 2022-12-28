@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-12-2022 a las 21:51:40
--- Versión del servidor: 5.7.36
--- Versión de PHP: 7.4.26
+-- Tiempo de generación: 26-12-2022 a las 01:43:14
+-- Versión del servidor: 5.7.40
+-- Versión de PHP: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,20 +47,6 @@ INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `edad`, `mail`, `fecha_de_al
 (1, 'Pablo', 'Lioy', 26, 'pablo@email.com', '2022-11-07', '1530000000'),
 (2, 'Pablo', 'Lioy', 26, 'pablo@email.com', '2022-11-07', '1530000000'),
 (3, 'Alejandro', 'perez', 21, 'ale@email.com', '2022-10-10', '1530000001');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `consola`
---
-
-DROP TABLE IF EXISTS `consola`;
-CREATE TABLE IF NOT EXISTS `consola` (
-  `id_consola` int(3) NOT NULL,
-  `consola` varchar(20) NOT NULL,
-  `empresa_des` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_consola`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -120,14 +106,13 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `galeria`
 --
 
 INSERT INTO `galeria` (`id`, `descripcion`) VALUES
-(1, 'cambia10'),
 (2, 'testeo 2'),
 (3, 'testeo 3'),
 (4, 'afdsfasd'),
@@ -136,10 +121,7 @@ INSERT INTO `galeria` (`id`, `descripcion`) VALUES
 (7, 'asdfafsafda'),
 (8, 'ghafsfds'),
 (9, 'vvsdfg sdgvfds'),
-(10, 'dfgsbw '),
-(11, 'dsafsdfsa'),
-(12, 'dsafsdfsa'),
-(13, 'nuevo nuevisimo');
+(10, 'dfgsbw ');
 
 -- --------------------------------------------------------
 
@@ -193,6 +175,30 @@ INSERT INTO `usuarios` (`id`, `nombre`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `valoraciones`
+--
+
+DROP TABLE IF EXISTS `valoraciones`;
+CREATE TABLE IF NOT EXISTS `valoraciones` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `autor` varchar(50) NOT NULL,
+  `valoracion` int(2) NOT NULL,
+  `reseña` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `valoraciones`
+--
+
+INSERT INTO `valoraciones` (`id`, `autor`, `valoracion`, `reseña`) VALUES
+(1, 'Yo', 10, 'Muy buen juego, gráficamente hermoso y una excelente banda sonora. 10/10'),
+(2, 'Benjaxc', 8, 'Juego lindo, juego hermoso, juegazo. Comprar juego.'),
+(3, 'medio bestia 333', 7, 'La ambientación esta buena ,la jugabilidad se siente fluida la historia es hermosa ,no hay mucho que decir que a estas alturas no sepan ya, compralo no te arrepentirás');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `videojuegos`
 --
 
@@ -204,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `videojuegos` (
   `descripcion` text NOT NULL,
   `precio` int(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `videojuegos`
@@ -214,7 +220,7 @@ INSERT INTO `videojuegos` (`id`, `nombre`, `fecha_lanzamiento`, `descripcion`, `
 (1, 'Hollow Knight\r\n', '2023-01-21', '¡Forja tu propio camino en Hollow Knight! Una aventura épica a través de un vasto reino de insectos y héroes que se encuentra en ruinas. Explora cavernas tortuosas, combate contra criaturas corrompidas y entabla amistad con extraños insectos, todo en un estilo clásico en 2D dibujado a mano.\r\n', 0),
 (2, 'Dust: An Elysian Tail\r\n', '2023-01-22', 'Immerse yourself in a gorgeous hand-painted world on a search for your true identity. As the mysterious warrior, Dust, your action-packed journey will take you from peaceful glades to snowy mountaintops and beyond.\r\n', 0),
 (3, 'Ori and the Will of the Wisps\r\n', '2023-01-23', 'Comienza un nuevo viaje por un mundo enorme y exótico en el que encontrarás imponentes enemigos y puzles desafiantes en tu misión para desentrañar el destino de Ori.\r\n', 0),
-(8, 'elden Ring', '1996-01-21', 'cambiaro xc2', 200),
+(8, 'el anillo viejo', '1996-01-21', 'nuevo nuevo', 400),
 (10, 'Dragon Ball', '2022-12-12', 'Hola que tal', 300);
 COMMIT;
 

@@ -7,6 +7,7 @@ router.get('/', async (req, res, next) => {
     var galeria = await galeriaModel.getImage()
     res.render('admin/galeria', {
         layout: 'admin/layout',
+        usuario: req.session.nombre,
         galeria
     })
 })
@@ -45,5 +46,11 @@ router.post('/modificar/:id', controllerUpload.uploadGaleria, async (req, res, n
         })
     }
 })
+
+router.get('/eliminar/:id', async (req, res, next) => {
+    var id = req.params.id;
+    await galeriaModel.deleteGaleriaById(id);
+    res.redirect('/admin/galeria')
+});
 
 module.exports = router

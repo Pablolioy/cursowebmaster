@@ -12,38 +12,15 @@
     <div class="equipo">
         <h1> Equipo de desarrollo</h1>
         <ul class="personas">
+            {{#each nosotros}}
             <li>
-                <img src="images/emp/1.jpg" alt="">
-                <h2> Nombre 1</h2>
-                <h3> Puesto </h3>
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iste quas, tenetur earum,
-                    eligendi blanditiis nostrum provident architecto quidem nam reiciendis modi nihil tempore
-                    consequatur. Tenetur voluptatibus ducimus consectetur ipsa? </p>
+                <img src="images/emp/{{id_emp}}.png" alt="">
+                <h2>{{nombre}}</h2>
+                <h2>{{apellido}}</h2>
+                <h3>{{puesto}}</h3>
+                <p>{{descripcion}}</p>
             </li>
-            <li>
-                <img src="images/emp/2.png" alt="">
-                <h2> Nombre 1</h2>
-                <h3> Puesto </h3>
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iste quas, tenetur earum,
-                    eligendi blanditiis nostrum provident architecto quidem nam reiciendis modi nihil tempore
-                    consequatur. Tenetur voluptatibus ducimus consectetur ipsa? </p>
-            </li>
-            <li>
-                <img src="images/emp/3.png" alt="">
-                <h2> Nombre 1</h2>
-                <h3> Puesto </h3>
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iste quas, tenetur earum,
-                    eligendi blanditiis nostrum provident architecto quidem nam reiciendis modi nihil tempore
-                    consequatur. Tenetur voluptatibus ducimus consectetur ipsa? </p>
-            </li>
-            <li>
-                <img src="images/emp/4.png" alt="">
-                <h2> Nombre 1</h2>
-                <h3> Puesto </h3>
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iste quas, tenetur earum,
-                    eligendi blanditiis nostrum provident architecto quidem nam reiciendis modi nihil tempore
-                    consequatur. Tenetur voluptatibus ducimus consectetur ipsa? </p>
-            </li>
+            {{/each}}
         </ul>
     </div>
 </div>
