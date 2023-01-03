@@ -1,28 +1,27 @@
 <div class="">
   <div id="listado_nov">
     <h2 class="col-10">Listado de novedades</h2>
-    <a href="/admin/novedades/agregar"><button class="pushy__btn pushy__btn--df pushy__btn--green"><i
+    <a href="/admin/novedades/agregar"><button class="pushy__btn  pushy__btn--green h-w-auto"><i
           class="fa-solid fa-plus"></i>Agregar</button></a>
   </div>
   <table>
     <thead>
-      <tr>
+      <tr id="cabezera">
         <th class="col-1">Id</th>
-        <th class="col-3">Hora/Fecha</th>
-        <th class="col-6">Titulo</th>
-        <th class="col-6">Subtitulo</th>
-
-        <th class="col-2">Acciones</th>
+        <th class="col-3 desc">Hora/Fecha</th>
+        <th class="col-6 desc">Titulo</th>
+        <th class="col-6 desc">Subtitulo</th>
+        <th class="col-2 desc">Acciones</th>
       </tr>
     </thead>
     <tbody>
       {{#each novedades}}
-      <tr>
-        <td class="col-1">{{id}}</td>
-        <td class="col-3" data-label="nombre">{{hora_fecha}}</td>
-        <td class="col-6" data-label="apellido">{{titulo}}</td>
-        <td class="col-6" data-label="apellido">{{subtitulo}}</td>
-        <td class="col-2" data-label="acciones">
+      <tr class="filas">
+        <td class="col-1 wrap" data-label="id: -">{{id}}</td>
+        <td class="col-3 wrap" data-label="Hora/Fecha -">{{date hora_fecha "DD/MM/YYYY"}}</td>
+        <td class="col-6 wrap" data-label="Titulo -">{{titulo}}</td>
+        <td class="col-6 wrap" data-label="Subtitulo -">{{subtitulo}}</td>
+        <td class="col-2 acciones" data-label="acciones">
           <a href="/admin/novedades/modificar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                 class="fa-solid fa-pen-to-square"></i></button></a>
           <a href="/admin/novedades/eliminar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i

@@ -3,25 +3,25 @@
     <div id="listado_nov">
         <h2 class="col-10">Listado Galeria</h2>
         <form action="/admin/galeria/agregar" method="post">
-            <button class="pushy__btn pushy__btn--df pushy__btn--green" type="submit"><i class="fa-solid fa-plus"></i>Agregar</button>
+            <button class="pushy__btn  pushy__btn--green h-w-auto" type="submit"><i class="fa-solid fa-plus"></i>Agregar</button>
         </form>
     </div>
     <table>
         <thead>
-            <tr>
+            <tr id="cabezera">
                 <th class="col-1">Id</th>
-                <th class="col-3">Imagen</th>
-                <th class="col-4">Descripcion</th>
-                <th class="col-2">Acciones</th>
+                <th class="col-3 desc">Imagen</th>
+                <th class="col-4 desc">Descripcion</th>
+                <th class="col-2 desc">Acciones</th>
             </tr>
         </thead>
         <tbody>
             {{#each galeria}}
             <tr>
-                <td class="col-1">{{id}}</td>
-                <td class="col-3" data-label="imagen"><img src="/images/galeria/{{id}}.jpg" alt=""></td>
-                <td class="col-4" data-label="descripcion">{{descripcion}}</td>
-                <td class="col-2" data-label="acciones">
+                <td class="col-1 wrap" data-label="id">{{id}}</td>
+                <td class="col-3 wrap" data-label="imagen"><img src="/images/galeria/{{id}}.jpg" alt=""></td>
+                <td class="col-4 wrap" data-label="descripcion">{{descripcion}}</td>
+                <td class="col-2 acciones" data-label="acciones">
                     <a href="/admin/galeria/modificar/{{id}}" title="Editar"><button
                             class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                                 class="fa-solid fa-pen-to-square"></i></button></a>

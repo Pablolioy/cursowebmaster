@@ -3,11 +3,14 @@
     <div class="lista-juego">
     {{#each videojuegos}}
         <div class="juego">
-            <a href="videojuegos/{{id}}"><img src="images/juegos/{{id}}.png" alt="{{nombre}}"></a>
+            <a href="videojuegos/{{id}}">
+            <img id="imagen_juego" src="images/juegos/{{id}}.png" alt="{{nombre}}">
+            <img id="imagen_mobile" src="images/mobile/{{id}}.png" alt="{{nombre}}">
+            </a>
             <div class="juego-cont">
-                <a href="videojuegos/{{id}}"><h2>{{nombre}}</h2></a>
-                <h3>Fecha de lanzamiento: {{date fecha_lanzamiento "DD/MM/YYYY"}}</h3>
-                <h3>{{descripcion}}</h3>
+                <a href="videojuegos/{{id}}"><h2 id="juego_nombre">{{nombre}}</h2></a>
+                <h3 id="juego_fecha">Fecha de lanzamiento: {{date fecha_lanzamiento "DD/MM/YYYY"}}</h3>
+                <h3 id="juego_descripcion">{{descripcion}}</h3>
             </div>
         </div>
     {{/each}}

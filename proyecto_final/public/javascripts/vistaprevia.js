@@ -1,7 +1,5 @@
-console.log("estamos en el scritp")
-
 var $seleccionImage = document.querySelector("#imagen"),
-  $imagenPrevisualizacion = document.querySelector("#previsualizacion");
+  $imagenPrevisualizacion = document.querySelector(".previsualizacion");
  
   console.log($seleccionImage)
   console.log($imagenPrevisualizacion)
@@ -15,8 +13,8 @@ $seleccionImage.addEventListener("change", () => {
   const vista = archivos[0];
   const objectURL = URL.createObjectURL(vista);
 
-  console.log(vista)
-  console.log(objectURL)
-
   $imagenPrevisualizacion.src = objectURL;
+  $imagenPrevisualizacion.width = 960;
+  $imagenPrevisualizacion.height = 960;
+
 });

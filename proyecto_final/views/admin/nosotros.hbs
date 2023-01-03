@@ -2,32 +2,32 @@
 <div class="">
   <div id="listado_nov">
     <h2 class="col-10">Listado de Empleados</h2>
-    <a href="/admin/nosotros/agregar"><button class="pushy__btn pushy__btn--df pushy__btn--green"><i
+    <a href="/admin/nosotros/agregar"><button class="pushy__btn  pushy__btn--green h-w-auto"><i
           class="fa-solid fa-plus"></i>Agregar</button></a>
   </div>
   <table>
     <thead>
-      <tr>
+      <tr id="cabezera">
       <th class="col-1">Id</th>
-      <th class="col-2">Nombre</th>
-      <th class="col-2">Apellido</th>
-      <th class="col-3">Puesto</th>
-      <th class="col-4">Acciones</th>
+      <th class="col-2 desc">Nombre</th>
+      <th class="col-2 desc">Apellido</th>
+      <th class="col-3 desc">Puesto</th>
+      <th class="col-4 desc">Acciones</th>
       </tr>
     </thead>
     <tbody>
       {{#each nosotros}}
       <tr>
-        <td class="col-1">{{id_emp}}</td>
-        <td class="col-2">{{nombre}}</td>
-        <td class="col-2">{{apellido}}</td>
-        <td class="col-3">{{puesto}}</td>
-        <td class="col-4">
-          <a href="/admin/nosotros/modificar/cover/{{id}}" title="Foto Empleado"><button
+        <td class="col-1 wrap" data-label="id: -">{{id_emp}}</td>
+        <td class="col-2 wrap" data-label="Nombre -">{{nombre}}</td>
+        <td class="col-2 wrap" data-label="Apellido -">{{apellido}}</td>
+        <td class="col-3 wrap" data-label="Puesto -">{{puesto}}</td>
+        <td class="col-4 acciones" data-label="acciones">
+          <a href="/admin/nosotros/modificar/cover/{{id_emp}}" title="Foto Empleado"><button
               class="pushy__btn pushy__btn--sm pushy__btn--blue"><i class="fa-solid fa-image"></i></button></a>
-          <a href="/admin/nosotros/modificar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
+          <a href="/admin/nosotros/modificar/{{id_emp}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                 class="fa-solid fa-pen-to-square"></i></button></a>
-          <a href="/admin/nosotros/eliminar/{{id}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
+          <a href="/admin/nosotros/eliminar/{{id_emp}}"><button class="pushy__btn pushy__btn--sm pushy__btn--blue"><i
                 class="fa-solid fa-trash"></i></button></a>
         </td>
       </tr>

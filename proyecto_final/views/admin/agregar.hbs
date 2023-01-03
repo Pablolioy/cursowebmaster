@@ -1,20 +1,20 @@
 {{!-- ----------------------- --}}
 
-{{#if agregarnovedad}}<form action="/admin/novedades/agregar" method="post">
-    <p>
+{{#if agregarnovedad}}
+<form action="/admin/novedades/agregar" method="post">
+    <div class="formulario-admin">
         <label for="titulo">Titulo: </label>
         <input type="text" name="titulo" required>
-    </p>
-    <p>
+        <br>
         <label for="subtitulo">Subtitulo </label>
         <input type="text" name="subtitulo" required>
-    </p>
-    <p>
+        <br>
         <label for="contenido">Contenido </label>
         <textarea name="contenido" id="" rows="10" required></textarea>
-    </p>
 
-    <button class="ml-10" type="submit">Enviar</button>
+
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
 </form>
 {{/if}}
 
@@ -22,23 +22,29 @@
 
 {{#if agregarjuego}}
 <form action="/admin/videojuegos/agregar" method="post">
-    <p>
+    <div class="formulario-admin">
         <label for="nombre">Titulo: </label>
         <input type="text" name="nombre" required>
-    </p>
-    <p>
+        <br>
         <label for="fecha_lanzamiento">Fecha de lanzamiento </label>
         <input type="date" name="fecha_lanzamiento" required>
-    </p>
-    <p>
+        <br>
         <label for="descripcion">Descripcion </label>
         <textarea name="descripcion" id="" rows="10" required></textarea>
-    </p>
-    <p>
+        <br>
         <label for="precio">Precio </label>
         <input type="number" name="precio" required>
-    </p>
-    <button class="ml-10" type="submit">Enviar</button>
+        <br>
+        <label for="youtube_id">Youtube ID: </label>
+        <input type="text" name="youtube_id">
+        <br>
+        <label for="steam_id">Steam Id: </label>
+        <input type="text" name="steam_id">
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+        <br>
+        <img src="/images/guia/steam_id.png" alt="">
+        <img src="/images/guia/youtube_id.png" alt="">
+    </div>
 </form>
 {{/if}}
 
@@ -46,14 +52,14 @@
 
 {{#if agregarGaleria}}
 <form action="/admin/galeria/agregar" method="post">
-    <p>
+    <div class="formulario-admin">
         <label for="imagen">Imagen:</label>
         <input name="imagen" id="imagen" type="file" accept="image/jpeg">
-        <img id="previsualizacion">
+        <img class="previsualizacion">
         <label for="descripcion">Descripcion :</label>
         <input name="descripcion" type="text">
-        <button class="ml-10" type="submit">Enviar</button>
-    </p>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
 </form>
 {{/if}}
 
@@ -61,7 +67,7 @@
 
 {{#if agregarValoracion}}
 <form action="/admin/valoraciones/agregar" method="post">
-    <p>
+    <div class="formulario-admin">
         <label for="valoracion">Valoracion: </label>
         <input type="number" id="valoracion" name="valoracion" min="0" max="10" required>
         <br>
@@ -70,17 +76,17 @@
         <br>
         <label for="reseña">Reseña: </label>
         <input type="text" id="reseña" name="reseña" required>
-        <button class="ml-10" type="submit">Enviar</button>
-    </p>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
 </form>
 {{/if}}
 
 {{!-- ----------------------- --}}
 {{#if agregarEmpleado}}
 <form action="/admin/nosotros/empleado/agregar" method="post">
-    <p>
+    <div class="formulario-admin">
         <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre"required>
+        <input type="text" id="nombre" name="nombre" required>
         <br>
         <label for="apellido">Apellido: </label>
         <input type="text" id="apellido" name="apellido" required>
@@ -90,8 +96,8 @@
         <br>
         <label for="descripcion">Descripcion </label>
         <textarea name="descripcion" id="descripcion" rows="10" required></textarea>
-        <button class="ml-10" type="submit">Enviar</button>
-    </p>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
 </form>
 {{/if}}
 

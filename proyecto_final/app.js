@@ -18,6 +18,7 @@ var nosotrosRouter = require('./routes/nosotros');
 var contactoRouter = require('./routes/contacto');
 
 var adminLogin = require('./routes/admin/login');
+var adminHome = require('./routes/admin/Home');
 var adminNoverades = require('./routes/admin/novedades');
 var adminVideojuegos = require('./routes/admin/videojuegos');
 var adminGaleria = require('./routes/admin/galeria');
@@ -72,12 +73,13 @@ app.use('/contacto', contactoRouter);
 
 //--------
 app.use('/admin/login', adminLogin);
-// app.use('/admin/index', secured, adminIndex);
+app.use('/admin/', secured, adminHome);
 app.use('/admin/novedades', secured, adminNoverades);
 app.use('/admin/videojuegos', secured, adminVideojuegos);
 app.use('/admin/galeria', secured, adminGaleria);
 app.use('/admin/valoraciones', secured, adminValoraciones);
 app.use('/admin/nosotros', secured, adminNosotros);
+
 //-------------
 
 // catch 404 and forward to error handler

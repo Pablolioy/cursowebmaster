@@ -7,7 +7,7 @@ a{
 }
 
 a:visited{
-    color: black;
+    color: white;
 }
 
 nav,
@@ -17,6 +17,14 @@ footer {
     background: -webkit-linear-gradient(0deg, rgba(82, 82, 82, 0.64) 0%, #636363 20%);
     background: -moz-linear-gradient(0deg, rgba(82, 82, 82, 0.64) 0%, #636363 20%);
     color: white;
+}
+
+nav a{
+    color: black
+}
+
+nav a:visited{
+    color: black
 }
 
 main{

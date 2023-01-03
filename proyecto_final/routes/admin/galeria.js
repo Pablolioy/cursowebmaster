@@ -1,7 +1,9 @@
 var express = require('express');
-const controllerUpload = require('../../controllers/upload')
 var router = express.Router();
 var galeriaModel = require('../../models/galeriaModel')
+
+const fs = require('fs')
+const controllerUpload = require('../../controllers/upload')
 
 router.get('/', async (req, res, next) => {
     var galeria = await galeriaModel.getImage()
@@ -48,8 +50,13 @@ router.post('/modificar/:id', controllerUpload.uploadGaleria, async (req, res, n
 })
 
 router.get('/eliminar/:id', async (req, res, next) => {
-    var id = req.params.id;
+    let id = req.params.id
     await galeriaModel.deleteGaleriaById(id);
+    try {
+        fs.unlinkSync('./public/images/galeria/'+ id +'.jpg')
+      } catch(err) {
+        return
+      }
     res.redirect('/admin/galeria')
 });
 

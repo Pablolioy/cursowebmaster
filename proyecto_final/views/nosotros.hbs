@@ -1,5 +1,5 @@
-<div class="holder">
-    <div class="historia">
+<div>
+    <div>
         <h1>Historia</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quos laborum nulla, vero cum, modi
@@ -15,10 +15,12 @@
             {{#each nosotros}}
             <li>
                 <img src="images/emp/{{id_emp}}.png" alt="">
-                <h2>{{nombre}}</h2>
-                <h2>{{apellido}}</h2>
-                <h3>{{puesto}}</h3>
-                <p>{{descripcion}}</p>
+                <div id="info_emp">
+                    <h2 id="emp_puesto">{{puesto}}</h2>
+                    <h3 id="emp_nombre">{{nombre}} </h3>
+                    <h3 id="emp_apellido">{{apellido}}</h3>
+                    <p>{{descripcion}}</p>
+                </div>
             </li>
             {{/each}}
         </ul>

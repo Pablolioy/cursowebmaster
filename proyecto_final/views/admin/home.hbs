@@ -1,0 +1,19 @@
+<div id="homeadmin">
+    <h1>HOME</h1>
+    <form action="/admin" method="post" enctype="multipart/form-data">
+        <h1>Cambiar imagen</h2>
+        <br>
+        <input name="imagen" id="imagen" type="file" accept="image/jpeg">
+        <img class="previsualizacion h-w-100">
+        <button class="ml-10 pushy__btn pushy__btn--df pushy__btn--green" type="submit">Enviar</button>
+    </form>
+
+    <h1>Imagen actual</h1>
+    <div class="relative">
+        <img id="homeimg" class="h-w-auto" src="images/home1.jpg" width="960" height="960">
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="/javascripts/vistaprevia.js"></script>

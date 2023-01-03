@@ -1,99 +1,143 @@
 {{!-- NOVEDADES --}}
 
-    {{#if modificarNovedades}}
-    <form action="/admin/novedades/modificar" method="post">
+{{#if modificarNovedades}}
+<form action="/admin/novedades/modificar" method="post">
+    <div class="formulario-admin">
         <input type="hidden" value="{{novedad.id}}" name="id">
-        <p>
-            <label for="titulo">Titulo: </label>
-            <input type="text" value="{{novedad.titulo}}" name="titulo" required>
-        </p>
-        <p>
-            <label for="subtitulo">Subtitulo </label>
-            <input type="text" value="{{novedad.subtitulo}}" name="subtitulo" required>
-        </p>
-        <p>
-            <label for="contenido">Contenido </label>
-            <textarea name="contenido" id="" rows="10" required>{{novedad.contenido}}</textarea>
-        </p>
+        <label for="titulo">Titulo: </label>
+        <input type="text" value="{{novedad.titulo}}" name="titulo" required>
+        <br>
+        <label for="subtitulo">Subtitulo </label>
+        <input type="text" value="{{novedad.subtitulo}}" name="subtitulo" required>
+        <br>
+        <label for="contenido">Contenido </label>
+        <textarea name="contenido" id="" rows="10" required>{{novedad.contenido}}</textarea>
+    </div>
 
-        <button class="ml-10" type="submit">Enviar</button>
-    </form>
-    {{#if error}}
-    <p>{{message}}</p>
-    {{/if}}
-    {{/if}}
+    <button class="ml-10 pushy__btn  pushy__btn--green pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+</form>
+{{#if error}}
+<p>{{message}}</p>
+{{/if}}
+{{/if}}
 
 {{!-- VIDEOJUEGOS --}}
 
-    {{#if modificarVideojuego}}
-    <form action="/admin/videojuegos/modificar" method="post">
+{{#if modificarVideojuego}}
+<form action="/admin/videojuegos/modificar" method="post">
+    <div class="formulario-admin">
         <input type="hidden" value="{{juego.id}}" name="id">
-        <p>
-            <label for="nombre">Titulo: </label>
-            <input type="text" value="{{juego.nombre}}" name="nombre" required>
-        </p>
-        <p>
-            <label for="fecha_lanzamiento">Fecha de lanzamiento </label>
-            <input type="date" value="{{date juego.fecha_lanzamiento "YYYY-MM-DD"}}" name="fecha_lanzamiento" required>
-        </p>
-        <p>
-            <label for="descripcion">Descripcion </label>
-            <textarea name="descripcion" id="" rows="10" required>{{juego.descripcion}}</textarea>
-        </p>
-        <p>
-            <label for="precio">Precio: </label>
-            <input type="number" name="precio" value="{{juego.precio}}">
-        </p>
-        <button class="ml-10" type="submit">Enviar</button>
-    </form>
-    {{#if error}}
-    <p>{{message}}</p>
-    {{/if}}
-    {{/if}}
+        <label for="nombre">Titulo: </label>
+        <input type="text" value="{{juego.nombre}}" name="nombre" required>
+        <br>
+        <label for="fecha_lanzamiento">Fecha de lanzamiento </label>
+        <input type="date" value="{{date juego.fecha_lanzamiento "YYYY-MM-DD"}}" name="fecha_lanzamiento" required>
+        <br>
+        <label for="descripcion">Descripcion </label>
+        <textarea name="descripcion" id="" rows="10" required>{{juego.descripcion}}</textarea>
+        <br>
+        <label for="precio">Precio: </label>
+        <input type="number" name="precio" value="{{juego.precio}}">
+        <br>
+        <label for="youtube_id">YouTube ID: </label>
+        <input type="text" name="youtube_id" value="{{juego.youtube_id}}">
+        <br>
+        <label for="steam_id">Steam Id: </label>
+        <input type="text" name="steam_id" value="{{juego.steam_id}}">
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+        <br>
+        <img src="/images/guia/steam_id.png" alt="">
+        <img src="/images/guia/youtube_id.png" alt="">
+    </div>
+</form>
+{{/if}}
 
-    {{#if modificarCaratula}}
-    <form action="/admin/videojuegos/modificar/cover/{{id}}" method="post" enctype="multipart/form-data">
+
+{{#if modificarCaratula}}
+<form action="/admin/videojuegos/modificar/cover/{{id}}" method="post" enctype="multipart/form-data">
+    <div class="formulario-admin">
         <p>
             <input type="hidden" value="{{id}}" name="id">
             <label for="foto">foto </label>
-            <input name="foto" type="file" accept="image/png">
+            <input id="imagen" name="foto" type="file" accept="image/png">
+            <img id="previsualizacion" src="/images/juegos/{{id}}.png">
         </p>
-        <button class="ml-10" type="submit">Enviar</button>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
 
-    </form>
+{{/if}}
 
-    {{/if}}
+{{#if modificarCaratulaMobile}}
+<form action="/admin/videojuegos/modificar/covermobile/{{id}}" method="post" enctype="multipart/form-data">
+    <div class="formulario-admin">
+        <input type="hidden" value="{{id}}" name="id">
+        <label for="foto_mobile">foto mini </label>
+        <input id="imagen" name="foto_mobile" type="file" accept="image/png">
+        <img id="previsualizacion" src="/images/mobile/{{id}}.png">
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
+{{/if}}
 
-    {{#if modificarCaratulaMobile}}
-    <form action="/admin/videojuegos/modificar/covermobile/{{id}}" method="post" enctype="multipart/form-data">
-        <p>
-            <input type="hidden" value="{{id}}" name="id">
-            <label for="foto_mobile">foto mini </label>
-            <input id="imagen" name="foto_mobile" type="file" accept="image/png">
-            <img id="previsualizacion" src="/images/mobile/{{id}}.png">
-            <button class="ml-10" type="submit">Enviar</button>
-        </p>
-    </form>
-    {{/if}}
+{{!-- GALERIA --}}
 
-    {{!-- GALERIA --}}
+{{#if modificarGaleria}}
+<form action="/admin/galeria/modificar/{{galeria.id}}" method="post" enctype="multipart/form-data">
+    <div class="formulario-admin">
+        <input type="hidden" value="{{galeria.id}}" name="id">
+        <label for="imagen">Imagen :</label>
+        <input name="imagen" id="imagen" type="file" accept="image/jpg">
+        <img class="previsualizacion" src="/images/galeria/{{galeria.id}}.jpg">
+        <label for="descripcion">Descripcion :</label>
+        <input name="descripcion" type="text" value="{{galeria.descripcion}}">
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
+{{/if}}
 
-    {{#if modificarGaleria}}
-    <form action="/admin/galeria/modificar/{{galeria.id}}" method="post" enctype="multipart/form-data">
-        <p>
-            <input type="hidden" value="{{galeria.id}}" name="id">
-            <label for="imagen">Imagen :</label>
-            <input name="imagen" id="imagen" type="file" accept="image/jpg">
-            <img id="previsualizacion" src="/images/galeria/{{galeria.id}}.jpg">
-            <label for="descripcion">Descripcion :</label>
-            <input name="descripcion" type="text" value="{{galeria.descripcion}}">
-            <button class="ml-10" type="submit">Enviar</button>
-        </p>
-    </form>
-    {{/if}}
+{{!-- Nosotros --}}
 
-    {{#if error}}
-    <p>{{message}}</p>
-    {{/if}}
+{{#if modificarEmpleadoFoto}}
 
-    <script type="text/javascript" src="/javascripts/vistaprevia.js"></script>
+<form action="/admin/nosotros/modificar/cover/{{id}}" method="post" enctype="multipart/form-data">
+    <div class="formulario-admin">
+        <input type="hidden" value="{{id}}" name="id">
+        <label for="foto_emp">foto mini </label>
+        <input id="imagen" name="foto_emp" type="file" accept="image/png">
+        <img id="previsualizacion" src="/images/emp/{{id}}.png">
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
+
+{{/if}}
+
+{{#if modificarEmpleado}}
+
+<form action="/admin/nosotros/modificar/{{nosotros.id_emp}}" method="post">
+    <div class="formulario-admin">
+        <input type="hidden" value="{{nosotros.id_emp}}" name="id">
+        <label for="nombre">Nombre: </label>
+        <input type="text" value="{{nosotros.nombre}}" name="nombre" required>
+        <br>
+        <label for="apellido">Apellido </label>
+        <input type="text" value="{{nosotros.apellido}}" name="apellido" required>
+        <br>
+        <label for="puesto">Puesto </label>
+        <input type="text" name="puesto" value="{{nosotros.puesto}}">
+        <br>
+        <label for="descripcion">Descripcion </label>
+        <textarea name="descripcion" id="" rows="10" required>{{nosotros.descripcion}}</textarea>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
+
+{{/if}}
+
+{{!-- Error --}}
+
+{{#if error}}
+<p>{{message}}</p>
+{{/if}}
+
+<script type="text/javascript" src="/javascripts/vistaprevia.js"></script>

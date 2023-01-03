@@ -4,6 +4,14 @@
         text-align: center;
     }
 
+    #nav_principal li a{
+        font-size: 20px;
+    }
+    
+    #nav_principal{
+        flex-wrap: wrap;
+    }
+
     nav * a{
         font-size: 13px;
         font-weight: bold;
@@ -59,9 +67,7 @@
         padding-inline: 1%;
     }
 
-    .galeria img {
-        width: 49%;
-    }
+
 
     /* GALERIA FIN  */
 
@@ -71,7 +77,6 @@
     }
 
     .personas {
-        text-align: center;
         padding-inline: 0;
         flex-direction: column;
     }
@@ -80,8 +85,6 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        flex-direction: row;
-
     }
     
     .personas li img {
@@ -89,16 +92,25 @@
         padding: 2%;
     }
     
-    .personas li h2{
-        width: 59%;
-        margin-block: 2%;
+    #info_emp{
+        flex-direction: column;
+        text-align: center;
+        width: 58%;
         padding: 2%;
+        display: flex;
+        flex-wrap: wrap;
     }
-    .personas li h3{
-        text-align: left;
-        width: 100%;
-        padding-left: 2%;
+
+    #emp_puesto{
+        margin-block: 2%;
+    }
+    #emp_nombre,#emp_apellido{
+        font-size: 30px;
         margin-block: 2%
+    }
+
+    .personas li img{
+        height: 100%;
     }
 
     .personas li p {
@@ -137,5 +149,22 @@
     }
 
     /* CONTACTO FIN */
+    
+    /* VIDEOJUEGOS INICIO */
+
+    #juego_descripcion,
+    #juego_nombre,
+    #juego_fecha,
+    #imagen_juego{
+        display: none;
+    }
+
+    #imagen_mobile{
+        display: block;
+        width: 100%;
+    }
+
+    /* VIDEOJUEGOS FIN */
+
 
 }

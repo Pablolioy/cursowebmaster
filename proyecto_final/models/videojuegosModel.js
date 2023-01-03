@@ -1,24 +1,24 @@
 var pool = require('./bd');
 
-async function getVideojuegos(){
+async function getVideojuegos() {
     var query = "select * from videojuegos order by id desc"
     var rows = await pool.query(query);
     return rows;
 }
 
-async function getVideojuegosById(id){
+async function getVideojuegosById(id) {
     var query = "select * from videojuegos where id = ?"
-    var rows = await pool.query(query,[id]);
+    var rows = await pool.query(query, [id]);
     return rows[0];
 }
 
-async function deleteVideojuegoById(id){
-    var query="delete from videojuegos where id = ?"
+async function deleteVideojuegoById(id) {
+    var query = "delete from videojuegos where id = ?"
     var rows = await pool.query(query, [id]);
     return rows;
 }
 
-async function insertVideojuego(obj){
+async function insertVideojuego(obj) {
     try {
         var query = "insert into videojuegos set ?";
         var rows = await pool.query(query, [obj]);
@@ -29,14 +29,31 @@ async function insertVideojuego(obj){
     }
 }
 
-async function modificarVideojuegoById(obj, id){
-    try{
+async function modificarVideojuegoById(obj, id) {
+    try {
         var query = "update videojuegos set ? where id=?";
-        var rows = await pool.query(query,[obj, id]);
+        var rows = await pool.query(query, [obj, id]);
         return rows;
-    } catch (error){
+    } catch (error) {
         throw error;
     }
 }
 
-module.exports={getVideojuegos,getVideojuegosById,deleteVideojuegoById,insertVideojuego,modificarVideojuegoById}
+async function getListVideojuegos() {
+    var query = "select id from videojuegos order by id desc"
+    var rows = await pool.query(query);
+    var columns = [];
+    var row = {};
+    
+    rows.forEach(function (result,index) {
+        row = {
+            orden: index,
+            id: result.id
+        }
+        columns.push(row);
+    });
+
+    return columns;
+}
+
+module.exports = { getVideojuegos, getVideojuegosById, deleteVideojuegoById, insertVideojuego, modificarVideojuegoById, getListVideojuegos }

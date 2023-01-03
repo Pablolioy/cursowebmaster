@@ -23,4 +23,20 @@ async function insertEmpleado(obj){
     }
 }
 
-module.exports = {getEmpleados,getEmpleadoById,insertEmpleado}
+async function modificarEmpleadoById(obj, id) {
+    try {
+        var query = "update empleados set ? where id_emp=?";
+        var rows = await pool.query(query, [obj, id])
+        return rows;
+    } catch (error) {
+        throw (error)
+    }
+}
+
+async function deleteEmpleadoById(id){
+    var query="delete from empleados where id_emp = ?"
+    var rows = await pool.query(query, [id]);
+    return rows;
+}
+
+module.exports = { getEmpleados, getEmpleadoById, insertEmpleado, modificarEmpleadoById, deleteEmpleadoById}

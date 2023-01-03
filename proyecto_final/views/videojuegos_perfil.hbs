@@ -1,6 +1,27 @@
-<h1>{{juego.nombre}}</h1>
-<p>{{juego.descripcion}}</p>
+<div class="flex space-between" id="navjuegos">
+    <div>
+        {{#if juego.anterior}}
+        <a href="/videojuegos/{{juego.anterior}}" class="">
+            <p id="anterior">Anterior</p>
+        </a>
+        {{/if}}
+    </div>
+    <div>
+        {{#if juego.siguiente}}
+        <a href="/videojuegos/{{juego.siguiente}}" class="">
+            <p id="siguiente">Siguiente</p>
+        </a>
+        {{/if}}
+    </div>
+</div>
+<div class="iframe_div flex">
+    <h1 id="juego_titulo">{{juego.nombre}}</h1>
+    <p id="juego_descripcion">{{juego.descripcion}}</p>
 
-<iframe width="95%" height="500" src="https://www.youtube.com/embed/UAO2urG23S4" title="YouTube video player"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
+    <iframe width="95%" height="500" src="https://www.youtube.com/embed/{{juego.youtube_id}}" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <iframe src="https://store.steampowered.com/widget/{{juego.steam_id}}" frameborder="0" width="646"
+        height="190"></iframe>
+</div>
