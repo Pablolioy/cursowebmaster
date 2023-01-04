@@ -131,7 +131,23 @@
         <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
     </div>
 </form>
+{{/if}}
 
+{{#if modificarValoracion}}
+<form action="/admin/valoraciones/modificar" method="post">
+    <div class="formulario-admin">
+        <input type="hidden" value="{{objValoracion.id}}" name="id">
+        <label for="valoracion">Valoracion: </label>
+        <input type="number" id="valoracion" name="valoracion" value="{{objValoracion.valoracion}}" min="0" max="10" required>
+        <br>
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" value="{{objValoracion.autor}}" required>
+        <br>
+        <label for="reseña">Reseña: </label>
+        <input type="text" id="reseña" name="reseña" value="{{objValoracion.reseña}}" required>
+        <button class="ml-10 pushy__btn  pushy__btn--green" type="submit">Enviar</button>
+    </div>
+</form>
 {{/if}}
 
 {{!-- Error --}}

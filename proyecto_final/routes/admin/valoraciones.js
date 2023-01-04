@@ -35,10 +35,49 @@ router.post('/agregar', async (req, res, next) => {
         res.render('admin/agregar', {
             layout: 'admin/layout',
             error: true,
-            message: "No se cargo la novedad"
+            message: "No se cargo la valoracion"
         })
     }
 })
+
+router.get('/eliminar/:id', async (req, res, next) => {
+    var id = req.params.id;
+    await valoracionesModel.deleteValoracionById(id);
+    res.redirect('/admin/valoraciones')
+});
+    
+router.get('/modificar/:id', async(req, res, next) => {
+    let id = req.params.id;
+    var objValoracion = await valoracionesModel.getValoracionById(id);
+    res.render('admin/modificar',{
+        layout: 'admin/layout',
+        usuario: req.session.nombre,
+        modificarValoracion: true,
+        objValoracion
+    })
+})
+
+router.post('/modificar',async(req,res,next) => {
+    try {
+        let obj={
+            autor: req.body.autor,
+            valoracion: req.body.valoracion,
+            reseña: req.body.reseña
+        }
+        console.log(req.body.id)
+        console.log(obj)
+        await valoracionesModel.modificarValidacionById(obj, req.body.id)
+        res.redirect('/admin/valoraciones');
+    } catch (error) {
+        console.log(error);
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message:'No se modifico la valoracion'
+        })
+    }
+})
+
 
 
 module.exports = router

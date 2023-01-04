@@ -6,6 +6,12 @@ async function getValoraciones(){
     return rows
 }
 
+async function getValoracionById(id) {
+    var query = "select * from valoraciones where id = ?";
+    var rows = await pool.query(query,[id]);
+    return rows[0];
+}
+
 async function insertValoraciones(obj){
     try {
         console.log(obj)
@@ -17,4 +23,21 @@ async function insertValoraciones(obj){
         throw error;
     }
 }
-module.exports = {getValoraciones,insertValoraciones}
+
+async function deleteValoracionById(id){
+    var query="delete from valoraciones where id = ?"
+    var rows = await pool.query(query, [id]);
+    return rows;
+}
+
+async function modificarValidacionById(obj, id){
+    try{
+        var query = "update valoraciones set ? where id=?";
+        var rows = await pool.query(query,[obj, id]);
+        return rows;
+    } catch (error){
+        throw error;
+    }
+}
+
+module.exports = {getValoraciones,getValoracionById,modificarValidacionById,insertValoraciones,deleteValoracionById}
